@@ -3961,6 +3961,8 @@
     <Compile Include="Business\Helper\MenuHelper.cs" />
     <Compile Include="Business\Models\AppBoxContext.cs" />
     <Compile Include="Business\Models\AppBoxDatabaseInitializer.cs" />
+    <Compile Include="Business\Models\Article.cs" />
+    <Compile Include="Business\Models\ArticleCategory.cs" />
     <Compile Include="Business\Models\Config.cs" />
     <Compile Include="Business\Models\Dept.cs" />
     <Compile Include="Business\Models\ICustomTree.cs" />

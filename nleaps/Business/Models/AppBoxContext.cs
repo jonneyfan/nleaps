@@ -22,6 +22,11 @@ namespace nleaps
         public DbSet<Power> Powers { get; set; }
         public DbSet<Menu> Menus { get; set; }
 
+        public DbSet<Article> Articles { get; set; }
+
+        public DbSet<ArticleCategory> ArticleCategory { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -61,19 +66,6 @@ namespace nleaps
                 .WithMany(m => m.Children)
                 .Map(x => x.MapKey("ParentID"));
 
-            //modelBuilder.Entity<Menu>()
-            //    .HasOptional(m => m.Module)
-            //    .WithMany()
-            //    .Map(x => x.MapKey("ModuleID"));
-
-            //modelBuilder.Entity<Module>()
-            //    .HasMany(m => m.ModulePowers)
-            //    .WithRequired(mp => mp.Module);
-
-            //modelBuilder.Entity<Power>()
-            //    .HasMany(p => p.ModulePowers)
-            //    .WithRequired(mp => mp.Power);
-
             modelBuilder.Entity<Menu>()
                 .HasOptional(m => m.ViewPower)
                 .WithMany()
@@ -86,7 +78,12 @@ namespace nleaps
                     .MapLeftKey("RoleID")
                     .MapRightKey("PowerID"));
 
+            modelBuilder.Entity<ArticleCategory>()
+                 .HasOptional(m => m.Parent)
+                 .WithMany(m => m.Children)
+                 .Map(x => x.MapKey("ParentID"));
 
+            modelBuilder.Entity<Article>().HasOptional(a => a.ArticleCategory).WithMany().Map(x => x.MapKey("ArticleCategory"));
         }
     }
 }

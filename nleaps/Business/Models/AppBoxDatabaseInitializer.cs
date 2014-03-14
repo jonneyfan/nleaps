@@ -147,6 +147,14 @@ namespace nleaps
                             Remark = "二级菜单",
                             NavigateUrl = "~/admin/profile.aspx",
                             ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "文档分类",
+                            SortIndex = 130,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/articlecategory.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
                         }
                     }
                 }

@@ -74,6 +74,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\articlecategory.aspx" />
     <Content Include="admin\config.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\dept.aspx" />
@@ -3697,6 +3698,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\articlecategory.aspx.cs">
+      <DependentUpon>articlecategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\articlecategory.aspx.designer.cs">
+      <DependentUpon>articlecategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\config.aspx.cs">
       <DependentUpon>config.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

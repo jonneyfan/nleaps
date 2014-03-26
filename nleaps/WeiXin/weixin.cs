@@ -25,7 +25,7 @@ namespace nleaps.WeiXin
                 if (!string.IsNullOrEmpty(echoStr))
                 {
                     System.Web.HttpContext.Current.Response.Write(echoStr); //返回原值表示校验成功  
-                    System.Web.HttpContext.Current.Response.End();
+                    System.Web.HttpContext.Current.Response.End();    
                 }
             }
         }

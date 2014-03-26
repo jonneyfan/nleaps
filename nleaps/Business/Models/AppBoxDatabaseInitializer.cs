@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace nleaps
 {
-    public class nleapsDatabaseInitializer : DropCreateDatabaseAlways<nleapsContext>  // DropCreateDatabaseAlways<nleapsContext>  DropCreateDatabaseIfModelChanges<nleapsContext>
+    public class nleapsDatabaseInitializer : DropCreateDatabaseIfModelChanges<nleapsContext>  // DropCreateDatabaseAlways<nleapsContext>  DropCreateDatabaseIfModelChanges<nleapsContext>
     {
         protected override void Seed(nleapsContext context)
         {
@@ -438,6 +438,12 @@ namespace nleaps
                     Name = "CoreRolePowerEdit",
                     Title = "编辑角色权限",
                     GroupName = "CoreRolePower"
+                },
+                new Power
+                {
+                    Name = "CoreArticleCategoryView",
+                    Title = "文档分类",
+                    GroupName = "CoreArticleCategory"
                 }
             };
 

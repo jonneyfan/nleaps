@@ -3965,6 +3965,7 @@
     <Compile Include="admin\user_view.aspx.designer.cs">
       <DependentUpon>user_view.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Business\Helper\ArticleCategoryHelper.cs" />
     <Compile Include="Business\Helper\ConfigHelper.cs" />
     <Compile Include="Business\Helper\DeptHelper.cs" />
     <Compile Include="Business\Helper\MenuHelper.cs" />

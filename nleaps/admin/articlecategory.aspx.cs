@@ -1,10 +1,12 @@
-﻿using FineUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Linq;
+using System.Data.Entity;
+using FineUI;
+using EntityFramework.Extensions;
 
 namespace nleaps.admin
 {
@@ -38,17 +40,17 @@ namespace nleaps.admin
         private void LoadData()
         {
             // 权限检查
-            CheckPowerWithButton("CoreDeptNew", btnNew);
+            CheckPowerWithButton("CoreArticleCategoryNew", btnNew);
 
 
-            btnNew.OnClientClick = Window1.GetShowReference("~/admin/dept_new.aspx", "新增部门");
+            btnNew.OnClientClick = Window1.GetShowReference("~/admin/articlecategory_new.aspx", "新增文档分类");
 
             BindGrid();
         }
 
         private void BindGrid()
         {
-            Grid1.DataSource = DeptHelper.Depts;
+            Grid1.DataSource = ArticleCategoryHelper.ArticleCategorys;
             Grid1.DataBind();
         }
 
@@ -65,41 +67,34 @@ namespace nleaps.admin
 
         protected void Grid1_RowCommand(object sender, GridCommandEventArgs e)
         {
-            //int deptID = GetSelectedDataKeyID(Grid1);
+            int articlecategoryID = GetSelectedDataKeyID(Grid1);
 
-            //if (e.CommandName == "Delete")
-            //{
-            //    // 在操作之前进行权限检查
-            //    if (!CheckPower("CoreDeptDelete"))
-            //    {
-            //        CheckPowerFailWithAlert();
-            //        return;
-            //    }
+            if (e.CommandName == "Delete")
+            {
+                // 在操作之前进行权限检查
+                if (!CheckPower("CoreArticleCategoryDelete"))
+                {
+                    CheckPowerFailWithAlert();
+                    return;
+                }
 
-            //    int userCount = DB.Users.Where(u => u.Dept.ID == deptID).Count();
-            //    if (userCount > 0)
-            //    {
-            //        Alert.ShowInTop("删除失败！需要先清空属于此部门的用户！");
-            //        return;
-            //    }
+                int childCount = DB.ArticleCategorys.Where(a =>a.Parent.ID == articlecategoryID).Count();
+                if (childCount > 0)
+                {
+                    Alert.ShowInTop("删除失败！请先删除子文档分类！");
+                    return;
+                }
 
-            //    int childCount = DB.Depts.Where(d => d.Parent.ID == deptID).Count();
-            //    if (childCount > 0)
-            //    {
-            //        Alert.ShowInTop("删除失败！请先删除子部门！");
-            //        return;
-            //    }
+                DB.ArticleCategorys.Delete<ArticleCategory>(a => a.ID == articlecategoryID);
 
-            //    DB.Depts.Delete<Dept>(d => d.ID == deptID);
-
-            //    DeptHelper.Reload();
-            //    BindGrid();
-            //}
+                ArticleCategoryHelper.Reload();
+                BindGrid();
+            }
         }
 
         protected void Window1_Close(object sender, EventArgs e)
         {
-            DeptHelper.Reload();
+            ArticleCategoryHelper.Reload();
             BindGrid();
         }
 

@@ -18,6 +18,8 @@ namespace nleaps
             GetPowers().ForEach(p => context.Powers.Add(p));
             GetTitles().ForEach(t => context.Titles.Add(t));
 
+            GetArticleCategorys().ForEach(a => context.ArticleCategorys.Add(a));
+
             context.SaveChanges();
             // 添加菜单时需要指定ViewPower，所以上面需要先保存到数据库
             GetMenus(context).ForEach(m => context.Menus.Add(m));
@@ -697,5 +699,50 @@ namespace nleaps
             return configs;
         }
 
+
+        private static List<ArticleCategory> GetArticleCategorys()
+        {
+            var articlecategorys = new List<ArticleCategory> { 
+                new ArticleCategory
+                {
+                    Name = "test1",
+                    sort = 1,
+                    CreateTime = DateTime.Now,
+                    Children = new List<ArticleCategory> { 
+                        new ArticleCategory
+                        {
+                            Name = "test2",
+                            sort = 2,
+                            CreateTime = DateTime.Now,
+                            Children = new List<ArticleCategory>{
+                                new ArticleCategory{
+                                    Name = "test4",
+                                    sort = 2,
+                                    CreateTime = DateTime.Now,
+                                },
+                                new ArticleCategory{
+                                    Name = "test5",
+                                    sort = 3,
+                                    CreateTime = DateTime.Now,
+                                },
+                                new ArticleCategory{
+                                    Name = "test6",
+                                    sort = 3,
+                                    CreateTime = DateTime.Now,
+                                }
+                            }
+                        },
+                        new ArticleCategory
+                        {
+                            Name = "test3",
+                            sort = 1,
+                            CreateTime = DateTime.Now,
+                        }
+                    }
+                }
+            };
+
+            return articlecategorys;
+        }
     }
 }

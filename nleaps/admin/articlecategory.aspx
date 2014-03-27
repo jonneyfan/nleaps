@@ -31,6 +31,8 @@
                         <f:BoundField DataField="Name" HeaderText="类别名称" DataSimulateTreeLevelField="TreeLevel"
                             Width="150px" />
                         <f:BoundField DataField="Sort" HeaderText="排序" Width="80px" />
+                        <f:BoundField DataField="CreateTime" SortField="CreateTime" DataFormatString="{0:yyyy-MM-dd HH:mm}"
+                        Width="120px" HeaderText="创建时间" />
                         <f:WindowField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑"
                             WindowID="Window1" Title="编辑" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/dept_edit.aspx?id={0}"
                             Width="50px" />

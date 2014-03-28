@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\articlecategory.aspx" />
+    <Content Include="admin\articlecategory_new.aspx" />
     <Content Include="admin\config.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\dept.aspx" />
@@ -3705,6 +3706,13 @@
     </Compile>
     <Compile Include="admin\articlecategory.aspx.designer.cs">
       <DependentUpon>articlecategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\articlecategory_new.aspx.cs">
+      <DependentUpon>articlecategory_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\articlecategory_new.aspx.designer.cs">
+      <DependentUpon>articlecategory_new.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\config.aspx.cs">
       <DependentUpon>config.aspx</DependentUpon>

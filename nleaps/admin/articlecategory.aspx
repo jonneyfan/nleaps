@@ -21,7 +21,7 @@
                             <Items>
                                 <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                 </f:ToolbarFill>
-                                <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="false" Text="新增文件类别">
+                                <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="false" Text="新增文裆类别">
                                 </f:Button>
                             </Items>
                         </f:Toolbar>
@@ -30,7 +30,7 @@
                         <f:RowNumberField />
                         <f:BoundField DataField="Name" HeaderText="类别名称" DataSimulateTreeLevelField="TreeLevel"
                             Width="150px" />
-                        <f:BoundField DataField="Sort" HeaderText="排序" Width="80px" />
+                        <f:BoundField DataField="sort" HeaderText="排序" Width="80px" />
                         <f:BoundField DataField="CreateTime" SortField="CreateTime" DataFormatString="{0:yyyy-MM-dd HH:mm}"
                         Width="120px" HeaderText="创建时间" />
                         <f:WindowField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑"

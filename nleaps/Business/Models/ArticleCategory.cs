@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace nleaps
 {
-    public class ArticleCategory:IKeyID
+    public class ArticleCategory : ICustomTree, IKeyID, ICloneable
     {
         [Key]
         public int ID { get; set; }
@@ -16,6 +16,7 @@ namespace nleaps
         public string Name { get; set; }
 
         public int sort { get; set; }
+        public string Remark { get; set; }
 
         public DateTime? CreateTime { get; set; }
 

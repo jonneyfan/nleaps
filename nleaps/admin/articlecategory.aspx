@@ -34,7 +34,7 @@
                         <f:BoundField DataField="CreateTime" SortField="CreateTime" DataFormatString="{0:yyyy-MM-dd HH:mm}"
                         Width="120px" HeaderText="创建时间" />
                         <f:WindowField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑"
-                            WindowID="Window1" Title="编辑" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/dept_edit.aspx?id={0}"
+                            WindowID="Window1" Title="编辑" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/articlecategory_edit.aspx?id={0}"
                             Width="50px" />
                         <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
                             ConfirmText="确定删除此记录？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />

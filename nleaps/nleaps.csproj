@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\articlecategory.aspx" />
+    <Content Include="admin\articlecategory_edit.aspx" />
     <Content Include="admin\articlecategory_new.aspx" />
     <Content Include="admin\config.aspx" />
     <Content Include="admin\default.aspx" />
@@ -83,6 +84,7 @@
     <Content Include="admin\dept_new.aspx" />
     <Content Include="admin\dept_user.aspx" />
     <Content Include="admin\dept_user_addnew.aspx" />
+    <Content Include="admin\doc_consult.aspx" />
     <Content Include="admin\help\help.htm" />
     <Content Include="admin\help\jisuanqi.htm" />
     <Content Include="admin\help\wannianli.htm" />
@@ -3707,6 +3709,13 @@
     <Compile Include="admin\articlecategory.aspx.designer.cs">
       <DependentUpon>articlecategory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\articlecategory_edit.aspx.cs">
+      <DependentUpon>articlecategory_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\articlecategory_edit.aspx.designer.cs">
+      <DependentUpon>articlecategory_edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\articlecategory_new.aspx.cs">
       <DependentUpon>articlecategory_new.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3762,6 +3771,13 @@
     </Compile>
     <Compile Include="admin\dept_user_addnew.aspx.designer.cs">
       <DependentUpon>dept_user_addnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\doc_consult.aspx.cs">
+      <DependentUpon>doc_consult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\doc_consult.aspx.designer.cs">
+      <DependentUpon>doc_consult.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\log.aspx.cs">
       <DependentUpon>log.aspx</DependentUpon>
@@ -3983,6 +3999,7 @@
     <Compile Include="Business\Models\ArticleCategory.cs" />
     <Compile Include="Business\Models\Config.cs" />
     <Compile Include="Business\Models\Dept.cs" />
+    <Compile Include="Business\Models\DocConsult.cs" />
     <Compile Include="Business\Models\ICustomTree.cs" />
     <Compile Include="Business\Models\IKeyID.cs" />
     <Compile Include="Business\Models\Log.cs" />

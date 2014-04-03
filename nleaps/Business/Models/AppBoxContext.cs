@@ -25,6 +25,7 @@ namespace nleaps
         public DbSet<Article> Articles { get; set; }
 
         public DbSet<ArticleCategory> ArticleCategorys { get; set; }
+        public DbSet<DocConsult> DocConsults { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

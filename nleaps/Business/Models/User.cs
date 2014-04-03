@@ -74,6 +74,7 @@ namespace nleaps
 
         public virtual ICollection<Role> Roles { get; set; }
         public virtual ICollection<Title> Titles { get; set; }
+        public virtual ICollection<DocConsult> DocConsults { get; set; }
 
         public virtual Dept Dept { get; set; }
         

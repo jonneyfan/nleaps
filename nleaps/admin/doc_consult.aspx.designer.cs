@@ -10,7 +10,7 @@
 namespace nleaps.admin {
     
     
-    public partial class articlecategory_new {
+    public partial class doc_consult {
         
         /// <summary>
         /// form1 控件。
@@ -40,6 +40,51 @@ namespace nleaps.admin {
         protected global::FineUI.Panel Panel1;
         
         /// <summary>
+        /// Form2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Form Form2;
+        
+        /// <summary>
+        /// FormRow1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.FormRow FormRow1;
+        
+        /// <summary>
+        /// ttbSearchMessage 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.TwinTriggerBox ttbSearchMessage;
+        
+        /// <summary>
+        /// Label1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Label Label1;
+        
+        /// <summary>
+        /// Grid1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Grid Grid1;
+        
+        /// <summary>
         /// Toolbar1 控件。
         /// </summary>
         /// <remarks>
@@ -49,84 +94,30 @@ namespace nleaps.admin {
         protected global::FineUI.Toolbar Toolbar1;
         
         /// <summary>
-        /// btnClose 控件。
+        /// ToolbarFill1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button btnClose;
+        protected global::FineUI.ToolbarFill ToolbarFill1;
         
         /// <summary>
-        /// ToolbarSeparator2 控件。
+        /// btnNew 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.ToolbarSeparator ToolbarSeparator2;
+        protected global::FineUI.Button btnNew;
         
         /// <summary>
-        /// btnSaveClose 控件。
+        /// Window1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button btnSaveClose;
-        
-        /// <summary>
-        /// SimpleForm1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.SimpleForm SimpleForm1;
-        
-        /// <summary>
-        /// tbxName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.TextBox tbxName;
-        
-        /// <summary>
-        /// tbxSortIndex 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.NumberBox tbxSortIndex;
-        
-        /// <summary>
-        /// tbxCreateTime 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.TextBox tbxCreateTime;
-        
-        /// <summary>
-        /// ddlParent 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.DropDownList ddlParent;
-        
-        /// <summary>
-        /// tbxRemark 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.TextArea tbxRemark;
+        protected global::FineUI.Window Window1;
     }
 }

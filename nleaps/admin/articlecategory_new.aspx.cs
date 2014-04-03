@@ -70,6 +70,7 @@ namespace nleaps.admin
             ArticleCategory item = new ArticleCategory();
             item.Name = tbxName.Text.Trim();
             item.sort = Convert.ToInt32(tbxSortIndex.Text.Trim());
+            
             item.Remark = tbxRemark.Text.Trim();
 
             int parentID = Convert.ToInt32(ddlParent.SelectedValue);

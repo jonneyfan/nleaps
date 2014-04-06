@@ -24,7 +24,7 @@ namespace nleaps
         public string ReleaseDateTime { get; set; }//发布时间
 
 
-        public virtual ICollection<User> Users { get; set; }
+        public virtual User User { get; set; }
 
 
 

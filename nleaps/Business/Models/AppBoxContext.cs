@@ -90,10 +90,7 @@ namespace nleaps
                 .Map(x => x.MapKey("ArticleCategory"));
 
 
-            modelBuilder.Entity<DocConsult>()
-                .HasOptional(doc => doc.Users)
-                .WithMany()
-                .Map(x => x.MapKey("DocConsult"));
+          
         }
     }
 }

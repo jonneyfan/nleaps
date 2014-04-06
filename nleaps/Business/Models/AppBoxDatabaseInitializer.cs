@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace nleaps
 {
-    public class nleapsDatabaseInitializer : DropCreateDatabaseIfModelChanges<nleapsContext>  // DropCreateDatabaseAlways<nleapsContext>  DropCreateDatabaseIfModelChanges<nleapsContext>
+    public class nleapsDatabaseInitializer : DropCreateDatabaseAlways<nleapsContext>  // DropCreateDatabaseAlways<nleapsContext>  DropCreateDatabaseIfModelChanges<nleapsContext>
     {
         protected override void Seed(nleapsContext context)
         {
@@ -19,11 +19,11 @@ namespace nleaps
             GetTitles().ForEach(t => context.Titles.Add(t));
 
             GetArticleCategorys().ForEach(a => context.ArticleCategorys.Add(a));
-            GetDocConsults().ForEach(doc => context.DocConsults.Add(doc));
-
+            //GetDocConsults().ForEach(d => context.DocConsults.Add(d));
             context.SaveChanges();
             // 添加菜单时需要指定ViewPower，所以上面需要先保存到数据库
             GetMenus(context).ForEach(m => context.Menus.Add(m));
+
         }
 
         private static List<Menu> GetMenus(nleapsContext context)
@@ -474,6 +474,22 @@ namespace nleaps
                 },
                 new Power
                 {
+                    Name = "CoreArticleCategoryNew",
+                    Title = "文档分类新建",
+                    GroupName = "CoreArticleCategory"
+                },new Power
+                {
+                    Name = "CoreArticleCategoryEdit",
+                    Title = "文档分类编辑",
+                    GroupName = "CoreArticleCategory"
+                },new Power
+                {
+                    Name = "CoreArticleCategoryDelete",
+                    Title = "文档分类删除",
+                    GroupName = "CoreArticleCategory"
+                },
+                new Power
+                {
                     Name = "CoreDocConsultView",
                     Title = "浏览文件查阅列表",
                     GroupName = "CoreDocConsult"
@@ -802,6 +818,7 @@ namespace nleaps
                     Header = "肇府信息[2014]第1期",
                     ReleaseDept= "区府办",
                     ReleaseDateTime = "2014/4/3",
+                    User= new User{}
                 },
                 new DocConsult
                 {

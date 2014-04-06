@@ -11,6 +11,8 @@ namespace nleaps
     {
         [Key]
         public int ID { get; set; }
+        [Required, StringLength(50)]
+        public string Name { get; set; }
 
         [Required, StringLength(50)]
         public string Header { get; set; }//文件标题

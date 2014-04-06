@@ -19,5 +19,8 @@ namespace nleaps
 
         [StringLength(500)]
         public string Remark { get; set; }
+
+        [StringLength(500)]
+        public string ReleaseDateTime { get; set; }
     }
 }

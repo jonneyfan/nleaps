@@ -84,7 +84,16 @@ namespace nleaps
                  .WithMany(m => m.Children)
                  .Map(x => x.MapKey("ParentID"));
 
-            modelBuilder.Entity<Article>().HasOptional(a => a.ArticleCategory).WithMany().Map(x => x.MapKey("ArticleCategory"));
+            modelBuilder.Entity<Article>()
+                .HasOptional(a => a.ArticleCategory)
+                .WithMany()
+                .Map(x => x.MapKey("ArticleCategory"));
+
+
+            modelBuilder.Entity<DocConsult>()
+                .HasOptional(doc => doc.Users)
+                .WithMany()
+                .Map(x => x.MapKey("DocConsult"));
         }
     }
 }

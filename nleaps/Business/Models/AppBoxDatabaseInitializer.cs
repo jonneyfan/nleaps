@@ -19,6 +19,7 @@ namespace nleaps
             GetTitles().ForEach(t => context.Titles.Add(t));
 
             GetArticleCategorys().ForEach(a => context.ArticleCategorys.Add(a));
+            GetDocConsults().ForEach(doc => context.DocConsults.Add(doc));
 
             context.SaveChanges();
             // 添加菜单时需要指定ViewPower，所以上面需要先保存到数据库
@@ -153,9 +154,33 @@ namespace nleaps
                          new Menu
                         {
                             Name = "文档分类",
-                            SortIndex = 130,
+                            SortIndex = 140,
                             Remark = "二级菜单",
                             NavigateUrl = "~/admin/articlecategory.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "文件查阅",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/doc_consult.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "简报通信",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/briefing_communication.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "通知公告",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/notice.aspx",
                             ImageUrl = "~/icon/tag_blue.png"
                         }
                     }
@@ -446,6 +471,30 @@ namespace nleaps
                     Name = "CoreArticleCategoryView",
                     Title = "文档分类",
                     GroupName = "CoreArticleCategory"
+                },
+                new Power
+                {
+                    Name = "CoreDocConsultView",
+                    Title = "浏览文件查阅列表",
+                    GroupName = "CoreDocConsult"
+                },
+                new Power
+                {
+                    Name = "CoreDocConsultNew",
+                    Title = "新增文件查阅",
+                    GroupName = "CoreDocConsult"
+                },
+                new Power
+                {
+                    Name = "CoreDocConsultEdit",
+                    Title = "编辑文件查阅",
+                    GroupName = "CoreDocConsult"
+                },
+                new Power
+                {
+                    Name = "CoreDocConsultDelete",
+                    Title = "删除文件查阅",
+                    GroupName = "CoreDocConsult"
                 }
             };
 
@@ -744,5 +793,33 @@ namespace nleaps
 
             return articlecategorys;
         }
+
+        private static List<DocConsult> GetDocConsults()
+        {
+            var doc_consults = new List<DocConsult> { 
+                new DocConsult
+                {
+                    Header = "肇府信息[2014]第1期",
+                    ReleaseDept= "区府办",
+                    ReleaseDateTime = "2014/4/3",
+                },
+                new DocConsult
+                {
+                    Header = "肇府信息[2014]第2期",
+                    ReleaseDept= "区府办",
+                    ReleaseDateTime = "2014/4/3",
+                },
+                new DocConsult
+                {
+                    Header = "肇府信息[2014]第3期",
+                    ReleaseDept= "区府办",
+                    ReleaseDateTime = "2014/4/3",
+                }
+            };
+
+            return doc_consults;
+        }
+
+
     }
 }

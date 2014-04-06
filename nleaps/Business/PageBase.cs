@@ -74,9 +74,9 @@ namespace nleaps
             }
 
             // 设置主题
-            if (PageManager.Instance != null)
+           if (PageManager.Instance != null)
             {
-                PageManager.Instance.Theme = (Theme)Enum.Parse(typeof(Theme), ConfigHelper.Theme, true);
+               PageManager.Instance.Theme = (Theme)Enum.Parse(typeof(Theme), ConfigHelper.Theme, true);
             }
 
             UpdateOnlineUser(User.Identity.Name);

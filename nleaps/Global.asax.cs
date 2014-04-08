@@ -14,7 +14,7 @@ namespace nleaps
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Database.SetInitializer(new nleapsDatabaseInitializer());
+            //Database.SetInitializer(new nleapsDatabaseInitializer());
 
         }
 

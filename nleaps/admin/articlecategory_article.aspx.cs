@@ -48,7 +48,7 @@ namespace nleaps.admin
 
             BindGrid1();
 
-            // 默认选中第一个部门
+            // 默认选中第一个文档分类
             Grid1.SelectedRowIndex = 0;
 
             // 每页记录数
@@ -60,9 +60,9 @@ namespace nleaps.admin
 
         private void BindGrid1()
         {
-            List<ArticleCategory> mys = ArticleCategoryHelper.ArticleCategorys;
+            List<ArticleCategory> q = ArticleCategoryHelper.ArticleCategorys;
 
-            Grid1.DataSource = mys;
+            Grid1.DataSource = q;
             Grid1.DataBind();
         }
 
@@ -88,6 +88,10 @@ namespace nleaps.admin
                 {
                     q.Where(a => a.Title.Contains(searchText));
                 }
+
+                //过滤选中文档分类下的所有文档
+                q = q.Where(a => a.ArticleCategory.ID == articlecategoryID);
+                
 
                 // 在查询添加之后，排序和分页之前获取总记录数
                 Grid2.RecordCount = q.Count();
@@ -126,13 +130,13 @@ namespace nleaps.admin
 
         #region Grid2 Events
 
-        protected void ttbSearchUser_Trigger2Click(object sender, EventArgs e)
+        protected void ttbSearchTitle_Trigger2Click(object sender, EventArgs e)
         {
             ttbSearchTitle.ShowTrigger1 = true;
             BindGrid2();
         }
 
-        protected void ttbSearchUser_Trigger1Click(object sender, EventArgs e)
+        protected void ttbSearchTitle_Trigger1Click(object sender, EventArgs e)
         {
             ttbSearchTitle.Text = String.Empty;
             ttbSearchTitle.ShowTrigger1 = false;
@@ -172,22 +176,7 @@ namespace nleaps.admin
             List<int> articleIDs = GetSelectedDataKeyIDs(Grid2);
 
 
-            /*
-            Dept dept = DB.Depts.Include(d => d.Users)
-                .Where(d => d.ID == deptID)
-                .FirstOrDefault();
-
-            foreach (int userID in userIDs)
-            {
-                User user = dept.Users.Where(u => u.ID == userID).FirstOrDefault();
-                if (user != null)
-                {
-                    dept.Users.Remove(user);
-                }
-            }
-
-            DB.SaveChanges();
-             * */
+         
 
             DB.Articles.Include(a => a.ArticleCategory)
                 .Where(a => articleIDs.Contains(a.ID))

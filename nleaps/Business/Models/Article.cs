@@ -13,6 +13,8 @@ namespace nleaps
 
         [Required, StringLength(50)]
         public string Title { get; set; }
+         [StringLength(50)]
+        public string Name { get; set; }
 
         [StringLength(5000)]
         public string Content { get; set; }

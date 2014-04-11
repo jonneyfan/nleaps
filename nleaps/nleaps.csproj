@@ -78,6 +78,7 @@
     <Content Include="admin\articlecategory_article_addnew.aspx" />
     <Content Include="admin\articlecategory_edit.aspx" />
     <Content Include="admin\articlecategory_new.aspx" />
+    <Content Include="admin\article_view.aspx" />
     <Content Include="admin\config.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\dept.aspx" />
@@ -3737,6 +3738,13 @@
     </Compile>
     <Compile Include="admin\articlecategory_new.aspx.designer.cs">
       <DependentUpon>articlecategory_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\article_view.aspx.cs">
+      <DependentUpon>article_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\article_view.aspx.designer.cs">
+      <DependentUpon>article_view.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\config.aspx.cs">
       <DependentUpon>config.aspx</DependentUpon>

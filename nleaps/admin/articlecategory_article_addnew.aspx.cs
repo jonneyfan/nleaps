@@ -71,6 +71,7 @@ namespace nleaps.admin
                 q = q.Where(a => a.Title.Contains(searchText));
             }
 
+
             // 在查询添加之后，排序和分页之前获取总记录数
             Grid1.RecordCount = q.Count();
 

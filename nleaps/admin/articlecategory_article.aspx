@@ -27,8 +27,12 @@
                             <Rows>
                                 <f:FormRow ID="FormRow2" runat="server">
                                     <Items>
-                                       <f:TwinTriggerBox ID="ttbSearchTitle" runat="server" ShowLabel="false" EmptyText="在文档标题中搜索"  >
-                                        </f:TwinTriggerBox>
+                                        <f:TwinTriggerBox ID="ttbSearchTitle" Width="160px" runat="server" ShowLabel="false"
+                        EmptyText="在文档标题中搜索" Trigger1Icon="Clear" Trigger2Icon="Search" ShowTrigger1="false"
+                        OnTrigger2Click="ttbSearchTitle_Trigger2Click" OnTrigger1Click="ttbSearchTitle_Trigger1Click">
+                    </f:TwinTriggerBox>
+
+
                                         <f:Label runat="server">
                                         </f:Label>
                                     </Items>
@@ -68,8 +72,8 @@
                                 <f:BoundField DataField="CreateTime" SortField="CreateTime" Width="100px" HeaderText="创建时间"></f:BoundField>
                                 <f:BoundField DataField="UpdateTime" SortField="UpdateTime" Width="100px" HeaderText="修改时间"></f:BoundField>
                                 <f:BoundField DataField="KeyWord" SortField="KeyWord" Width="50px" HeaderText="关键字"></f:BoundField>   
-                                
-                                <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="从当前文档分类中移除此文档" ConfirmText="确定从当前文档分裂中移除此文档？" ConfirmTarget="Top" CommandName="Delete" Width="50px"></f:LinkButtonField>
+                                <f:WindowField TextAlign="Center" Icon="Information" ToolTip="查看文档详细信息" Title="查看文档详细信息" WindowID="Window1" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/article_view.aspx?id={0}" Width="50px"></f:WindowField>
+                                <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="从当前文档分类中移除此文档" ConfirmText="确定从当前文档分类中移除此文档？" ConfirmTarget="Top" CommandName="Delete" Width="50px"></f:LinkButtonField>
                             </Columns>
                         </f:Grid>
                     </Items>

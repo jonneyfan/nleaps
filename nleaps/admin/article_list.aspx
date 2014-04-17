@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="articlecategory_article.aspx.cs" Inherits="nleaps.admin.articlecategory_article" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_list.aspx.cs" Inherits="nleaps.admin.article_list" %>
 
 <!DOCTYPE html>
 <html>
@@ -47,7 +47,7 @@
                                         </f:Button>
                                         <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                         </f:ToolbarFill>
-                                        <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="true" OnClick="btnNew_Click" Text="添加文档到当前文档分类">
+                                        <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="true" OnClick="btnNew_Click" Text="添加文档">
                                         </f:Button>
                                     </Items>
                                 </f:Toolbar>

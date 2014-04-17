@@ -10,7 +10,7 @@
 namespace nleaps.admin {
     
     
-    public partial class articlecategory_article {
+    public partial class article_list {
         
         /// <summary>
         /// form1 控件。

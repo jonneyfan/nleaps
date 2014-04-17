@@ -59,7 +59,7 @@
     // updateLocationHash: 切换Tab时，是否更新地址栏Hash值
     // refreshWhenExist： 添加选项卡时，如果选项卡已经存在，是否刷新内部IFrame
     // refreshWhenTabChange: 切换选项卡时，是否刷新内部IFrame
-    F.util.initTreeTabStrip(treeMenu, mainTabStrip, null, true, false, false);
+    F.util.initTreeTabStrip(treeMenu, mainTabStrip, null, true, false, true);
 
     // 公开添加示例标签页的方法
     window.addExampleTab = function (id, url, text, icon, refreshWhenExist) {

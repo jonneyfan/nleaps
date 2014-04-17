@@ -35,6 +35,14 @@ namespace nleaps
                     SortIndex = 1,
                     Remark = "顶级菜单",
                     Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "文档列表",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/admin/article_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
                         new Menu
                         {
                             Name = "文档分类",

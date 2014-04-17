@@ -47,7 +47,6 @@ namespace nleaps.admin
         private void BindDDL()
         {
             List<ArticleCategory> articlecategorys = ResolveDDL<ArticleCategory>(ArticleCategoryHelper.ArticleCategorys);
-
             // 绑定到下拉列表（启用模拟树功能）
             ddlParent.EnableSimulateTree = true;
             ddlParent.DataTextField = "Name";
@@ -70,7 +69,7 @@ namespace nleaps.admin
             ArticleCategory item = new ArticleCategory();
             item.Name = tbxName.Text.Trim();
             item.sort = Convert.ToInt32(tbxSortIndex.Text.Trim());
-            
+            item.CreateTime = DateTime.Now;
             item.Remark = tbxRemark.Text.Trim();
 
             int parentID = Convert.ToInt32(ddlParent.SelectedValue);

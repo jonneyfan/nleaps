@@ -90,7 +90,7 @@ namespace nleaps.admin
             item.Name = tbxName.Text.Trim();
             item.sort = Convert.ToInt32(tbxSortIndex.Text.Trim());
             item.Remark = tbxRemark.Text.Trim();
-
+            item.CreateTime = DateTime.Now;
             int parentID = Convert.ToInt32(ddlParent.SelectedValue);
             if (parentID == -1)
             {

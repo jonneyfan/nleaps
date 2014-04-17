@@ -9,7 +9,7 @@ using FineUI;
 
 namespace nleaps.admin
 {
-    public partial class articlecategory_article : PageBase
+    public partial class article_list : PageBase
     {
         #region ViewPower
 
@@ -236,7 +236,7 @@ namespace nleaps.admin
         protected void btnNew_Click(object sender, EventArgs e)
         {
             int articlecategoryID = GetSelectedDataKeyID(Grid1);
-            string addUrl = String.Format("~/admin/articlecategory_article_addnew.aspx?id={0}", articlecategoryID);
+            string addUrl = String.Format("~/admin/article_new.aspx?id={0}", articlecategoryID);
 
             PageContext.RegisterStartupScript(Window1.GetShowReference(addUrl, "添加文档到当前文档分类"));
         }

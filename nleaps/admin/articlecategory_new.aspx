@@ -35,14 +35,6 @@
                         </f:TextBox>
                         <f:NumberBox ID="tbxSortIndex" Label="排序" Required="true" ShowRedStar="true" runat="server">
                         </f:NumberBox>
-
-                       <f:TextBox ID="tbxCreateTime"  runat="server" Label="创建时间" Required="true" ShowRedStar="true">
-                       </f:TextBox>
-
-                      
-
-                         
-
                         <f:DropDownList ID="ddlParent" Label="上级类别" Required="true" ShowRedStar="true"
                             runat="server">
                         </f:DropDownList>

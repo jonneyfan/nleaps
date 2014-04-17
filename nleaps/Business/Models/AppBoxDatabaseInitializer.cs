@@ -29,19 +29,27 @@ namespace nleaps
         private static List<Menu> GetMenus(nleapsContext context)
         {
             var menus = new List<Menu> { 
-                 new Menu
+                new Menu
                 {
                     Name = "文档管理",
                     SortIndex = 1,
                     Remark = "顶级菜单",
-                    Children = new List<Menu> { 
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "文档列表",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/admin/article_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
                         new Menu
                         {
                             Name = "文档分类",
                             SortIndex = 140,
                             Remark = "二级菜单",
-                            NavigateUrl = "~/admin/articlecategory.aspx",
-                            ImageUrl = "~/icon/tag_blue.png"
+                            NavigateUrl="~/admin/articlecategory_article.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
                         },
                          new Menu
                         {
@@ -69,10 +77,12 @@ namespace nleaps
                         }
                     }
                 },
+
+
                 new Menu
                 {
                     Name = "系统管理",
-                    SortIndex = 10,
+                    SortIndex = 1,
                     Remark = "顶级菜单",
                     Children = new List<Menu> { 
                         new Menu
@@ -190,12 +200,10 @@ namespace nleaps
                             Remark = "二级菜单",
                             NavigateUrl = "~/admin/profile.aspx",
                             ImageUrl = "~/icon/tag_blue.png"
-                        }
-                        
+                        },
                     }
                 }
             };
-
             return menus;
         }
 

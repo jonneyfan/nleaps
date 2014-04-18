@@ -20,7 +20,7 @@ namespace nleaps.admin
         {
             get
             {
-                return "CoreArticleCategoryArticleView";
+                return "CoreArticleList";
             }
         }
 
@@ -39,8 +39,8 @@ namespace nleaps.admin
         private void LoadData()
         {
             // 权限检查
-            CheckPowerWithButton("CoreArticleCategoryArticleNew", btnNew);
-            CheckPowerWithButton("CoreArticleCategoryArticleDelete", btnDeleteSelected);
+            CheckPowerWithButton("CoreArticleNew", btnNew);
+            CheckPowerWithButton("CoreArticleDelete", btnDeleteSelected);
 
 
             ResolveDeleteButtonForGrid(btnDeleteSelected, Grid2, "确定要从当前文档分类移除选中的{0}项记录吗？");

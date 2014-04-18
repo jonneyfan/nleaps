@@ -22,7 +22,7 @@ namespace nleaps.admin
         {
             get
             {
-                return "CoreArticleCategoryArticleNew";
+                return "CoreArticleNew";
             }
         }
 

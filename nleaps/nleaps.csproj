@@ -4023,6 +4023,8 @@
     <Compile Include="Business\Models\Config.cs" />
     <Compile Include="Business\Models\Dept.cs" />
     <Compile Include="Business\Models\DocConsult.cs" />
+    <Compile Include="Business\Models\Form\From.cs" />
+    <Compile Include="Business\Models\Form\FromType.cs" />
     <Compile Include="Business\Models\ICustomTree.cs" />
     <Compile Include="Business\Models\IKeyID.cs" />
     <Compile Include="Business\Models\Log.cs" />
@@ -4032,6 +4034,9 @@
     <Compile Include="Business\Models\Role.cs" />
     <Compile Include="Business\Models\Title.cs" />
     <Compile Include="Business\Models\User.cs" />
+    <Compile Include="Business\Models\WorkFlow\WorkFlow.cs" />
+    <Compile Include="Business\Models\WorkFlow\WorkFlowNode.cs" />
+    <Compile Include="Business\Models\WorkFlow\WorkFlowWork.cs" />
     <Compile Include="Business\PageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

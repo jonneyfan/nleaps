@@ -6,13 +6,13 @@ using System.Web;
 
 namespace nleaps.Business.Models.Form
 {
-    public class From : IKeyID
+    public class Form : IKeyID
     {
         [Key]
         public int ID { get; set; }
 
         [StringLength(50)]
-        public string FromName { get; set; }
+        public string FormName { get; set; }
 
         [StringLength(50000)]
         public string Content { get; set; }
@@ -21,7 +21,7 @@ namespace nleaps.Business.Models.Form
 
         public virtual User User { get;set; }
 
-        public virtual FromType FromType { get; set; }
+        public virtual FormType FormType { get; set; }
 
         //public virtual ICollection<User> UserList { get; set; }
     }

@@ -359,7 +359,7 @@
     <Content Include="ueditor\ueditor.config.js" />
     <Content Include="ueditor\ueditor.parse.js" />
     <Content Include="ueditor\ueditor.parse.min.js" />
-    <Content Include="WorkFlow\FormAdd.aspx" />
+    <Content Include="WorkFlow\FormAdd1.aspx" />
     <Content Include="ueditor\net\fileUp.ashx" />
     <Content Include="ueditor\net\getContent.ashx" />
     <Content Include="ueditor\net\getMovie.ashx" />
@@ -371,6 +371,7 @@
     <Content Include="ueditor\third-party\video-js\font\vjs.eot" />
     <Content Include="ueditor\third-party\video-js\font\vjs.ttf" />
     <Content Include="ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="WorkFlow\FormAdd.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4269,8 +4270,8 @@
     <Compile Include="Business\Models\Config.cs" />
     <Compile Include="Business\Models\Dept.cs" />
     <Compile Include="Business\Models\DocConsult.cs" />
-    <Compile Include="Business\Models\Form\From.cs" />
-    <Compile Include="Business\Models\Form\FromType.cs" />
+    <Compile Include="Business\Models\Form\Form.cs" />
+    <Compile Include="Business\Models\Form\FormType.cs" />
     <Compile Include="Business\Models\ICustomTree.cs" />
     <Compile Include="Business\Models\IKeyID.cs" />
     <Compile Include="Business\Models\Log.cs" />
@@ -4317,9 +4318,16 @@
     <Compile Include="WeiXin\wx.ashx.cs">
       <DependentUpon>wx.ashx</DependentUpon>
     </Compile>
+    <Compile Include="WorkFlow\FormAdd1.aspx.cs">
+      <DependentUpon>FormAdd1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="WorkFlow\FormAdd.aspx.cs">
       <DependentUpon>FormAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\FormAdd.aspx.designer.cs">
+      <DependentUpon>FormAdd.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

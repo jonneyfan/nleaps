@@ -27,8 +27,8 @@ namespace nleaps
 
         public DbSet<ArticleCategory> ArticleCategorys { get; set; }
         public DbSet<DocConsult> DocConsults { get; set; }
-        public DbSet<From> Froms { get; set; }
-        public DbSet<FromType> FromTypes { get; set; }
+        public DbSet<Form> Froms { get; set; }
+        public DbSet<FormType> FromTypes { get; set; }
 
 
 
@@ -93,12 +93,12 @@ namespace nleaps
                 .WithMany()
                 .Map(x => x.MapKey("ArticleCategoryID"));
 
-            modelBuilder.Entity<From>()
-                .HasOptional(a => a.FromType)
+            modelBuilder.Entity<Form>()
+                .HasOptional(a => a.FormType)
                 .WithMany()
                 .Map(x => x.MapKey("FromTypeID"));
 
-            modelBuilder.Entity<From>()
+            modelBuilder.Entity<Form>()
                 .HasOptional(r => r.User)
                 .WithMany()
                  .Map(x => x.MapKey("UserID"));

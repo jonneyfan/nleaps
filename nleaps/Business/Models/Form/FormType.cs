@@ -6,7 +6,7 @@ using System.Web;
 
 namespace nleaps.Business.Models.Form
 {
-    public class FromType : IKeyID
+    public class FormType : IKeyID
     {
         [Key]
         public int ID { get; set; }

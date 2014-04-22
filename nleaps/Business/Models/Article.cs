@@ -26,6 +26,6 @@ namespace nleaps
         [StringLength(50)]
         public string KeyWord { get; set; }
 
-        public ArticleCategory ArticleCategory { get; set; }
+        public virtual ArticleCategory ArticleCategory { get; set; }
     }
 }

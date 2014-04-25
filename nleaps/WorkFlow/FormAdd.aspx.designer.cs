@@ -31,31 +31,58 @@ namespace nleaps.WorkFlow {
         protected global::FineUI.PageManager PageManager1;
         
         /// <summary>
-        /// Panel1 控件。
+        /// RegionPanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Panel Panel1;
+        protected global::FineUI.RegionPanel RegionPanel1;
         
         /// <summary>
-        /// GroupPanel1 控件。
+        /// Region1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.GroupPanel GroupPanel1;
+        protected global::FineUI.Region Region1;
         
         /// <summary>
-        /// SimpleForm1 控件。
+        /// ContentPanel2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.SimpleForm SimpleForm1;
+        protected global::FineUI.ContentPanel ContentPanel2;
+        
+        /// <summary>
+        /// btnChangeEnable 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Button btnChangeEnable;
+        
+        /// <summary>
+        /// Region2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Region Region2;
+        
+        /// <summary>
+        /// tbxTitle 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.TextBox tbxTitle;
         
         /// <summary>
         /// TextBox1 控件。
@@ -85,15 +112,6 @@ namespace nleaps.WorkFlow {
         protected global::FineUI.TextBox TextBox3;
         
         /// <summary>
-        /// TextBox4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUI.TextBox TextBox4;
-        
-        /// <summary>
         /// ContentPanel1 控件。
         /// </summary>
         /// <remarks>
@@ -103,21 +121,12 @@ namespace nleaps.WorkFlow {
         protected global::FineUI.ContentPanel ContentPanel1;
         
         /// <summary>
-        /// Button3 控件。
+        /// FCKeditor1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button3;
-        
-        /// <summary>
-        /// CKEditor1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::CKEditor.NET.CKEditorControl CKEditor1;
+        protected global::FredCK.FCKeditorV2.FCKeditor FCKeditor1;
     }
 }

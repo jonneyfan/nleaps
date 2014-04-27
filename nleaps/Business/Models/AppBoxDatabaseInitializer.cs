@@ -37,7 +37,7 @@ namespace nleaps
                     Children = new List<Menu> {
                          new Menu
                         {
-                            Name = "添加工作流",
+                            Name = "添加表单",
                             SortIndex = 140,
                             Remark = "二级菜单",
                             NavigateUrl="~/WorkFlow/FormAdd.aspx",

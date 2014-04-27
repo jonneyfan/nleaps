@@ -454,7 +454,6 @@
     <Content Include="library\Wilco.SyntaxHighlighter.dll" />
     <Content Include="main.aspx" />
     <Content Include="packages.config" />
-    <Content Include="WorkFlow\FormAdd1.aspx" />
     <Content Include="WorkFlow\FormAdd.aspx" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
@@ -4402,10 +4401,6 @@
     <Compile Include="WeiXin\weixin.cs" />
     <Compile Include="WeiXin\wx.ashx.cs">
       <DependentUpon>wx.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="WorkFlow\FormAdd1.aspx.cs">
-      <DependentUpon>FormAdd1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WorkFlow\FormAdd.aspx.cs">
       <DependentUpon>FormAdd.aspx</DependentUpon>

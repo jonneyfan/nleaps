@@ -13,17 +13,14 @@ namespace nleaps
 
         [Required, StringLength(50)]
         public string Title { get; set; }
-         [StringLength(50)]
+        [StringLength(50)]
         public string Name { get; set; }
+        public DateTime? CreateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
+  
 
         [StringLength(5000)]
         public string Content { get; set; }
-
-        public DateTime? CreateTime { get; set; }
-
-        public DateTime? UpdateTime { get; set; }
-
-        [StringLength(50)]
         public string KeyWord { get; set; }
 
         public ArticleCategory ArticleCategory { get; set; }

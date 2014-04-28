@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
+using nleaps.Business.Models.Form;
 
 namespace nleaps
 {
@@ -26,6 +27,9 @@ namespace nleaps
 
         public DbSet<ArticleCategory> ArticleCategorys { get; set; }
         public DbSet<DocConsult> DocConsults { get; set; }
+        public DbSet<Form> Froms { get; set; }
+        public DbSet<FormType> FromTypes { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -87,7 +91,24 @@ namespace nleaps
             modelBuilder.Entity<Article>()
                 .HasOptional(a => a.ArticleCategory)
                 .WithMany()
-                .Map(x => x.MapKey("ArticleCategory"));
+                .Map(x => x.MapKey("ArticleCategoryID"));
+
+            modelBuilder.Entity<Form>()
+                .HasOptional(a => a.FormType)
+                .WithMany()
+                .Map(x => x.MapKey("FromTypeID"));
+
+            modelBuilder.Entity<Form>()
+                .HasOptional(r => r.User)
+                .WithMany()
+                 .Map(x => x.MapKey("UserID"));
+
+            //modelBuilder.Entity<From>()
+            //    .HasMany(r => r.UserList)
+            //    .WithMany(u => u.Froms)
+            //    .Map(x => x.ToTable("FromUsers")
+            //        .MapLeftKey("FromID")
+            //        .MapRightKey("UserID"));
 
 
           

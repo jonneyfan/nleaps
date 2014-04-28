@@ -23,6 +23,6 @@ namespace nleaps
         public string Content { get; set; }
         public string KeyWord { get; set; }
 
-        public ArticleCategory ArticleCategory { get; set; }
+        public virtual ArticleCategory ArticleCategory { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using nleaps.Business.Models.Form;
 
 namespace nleaps
 {
@@ -75,6 +76,7 @@ namespace nleaps
         public virtual ICollection<Role> Roles { get; set; }
         public virtual ICollection<Title> Titles { get; set; }
         public virtual ICollection<DocConsult> DocConsults { get; set; }
+        //public virtual ICollection<From> Froms { get; set; }
 
         public virtual Dept Dept { get; set; }
         

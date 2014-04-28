@@ -31,6 +31,54 @@ namespace nleaps
             var menus = new List<Menu> { 
                 new Menu
                 {
+                    Name = "工作流管理",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "添加表单",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/WorkFlow/FormAdd.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "文档分类",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/admin/articlecategory.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "文件查阅",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/doc_consult.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "简报通信",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/briefing_communication.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "通知公告",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/notice.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                 new Menu
+                {
                     Name = "文档管理",
                     SortIndex = 1,
                     Remark = "顶级菜单",
@@ -48,7 +96,7 @@ namespace nleaps
                             Name = "文档分类",
                             SortIndex = 140,
                             Remark = "二级菜单",
-                            NavigateUrl="~/admin/articlecategory_article.aspx",
+                            NavigateUrl="~/admin/articlecategory.aspx",
                             ImageUrl ="~/icon/tag_blue.png"
                         },
                          new Menu
@@ -78,11 +126,10 @@ namespace nleaps
                     }
                 },
 
-
                 new Menu
                 {
                     Name = "系统管理",
-                    SortIndex = 1,
+                    SortIndex = 2,
                     Remark = "顶级菜单",
                     Children = new List<Menu> { 
                         new Menu
@@ -486,24 +533,48 @@ namespace nleaps
                 new Power
                 {
                     Name = "CoreArticleCategoryView",
-                    Title = "文档分类",
-                    GroupName = "CoreArticleCategory"
+                    Title = "文章分类",
+                    GroupName = "CoreArticlePower"
                 },
                 new Power
                 {
                     Name = "CoreArticleCategoryNew",
-                    Title = "文档分类新建",
-                    GroupName = "CoreArticleCategory"
+                    Title = "文章分类新建",
+                    GroupName = "CoreArticlePower"
                 },new Power
                 {
                     Name = "CoreArticleCategoryEdit",
-                    Title = "文档分类编辑",
-                    GroupName = "CoreArticleCategory"
+                    Title = "文章分类编辑",
+                    GroupName = "CoreArticlePower"
                 },new Power
                 {
                     Name = "CoreArticleCategoryDelete",
-                    Title = "文档分类删除",
-                    GroupName = "CoreArticleCategory"
+                    Title = "文章分类删除",
+                    GroupName = "CoreArticlePower"
+                },
+                new Power
+                {
+                    Name = "CoreArticleList",
+                    Title = "文章列表",
+                    GroupName = "CoreArticlePower"
+                },
+                new Power
+                {
+                    Name = "CoreArticleNew",
+                    Title = "文章新建",
+                    GroupName = "CoreArticlePower"
+                },
+                 new Power
+                {
+                    Name = "CoreArticleEdit",
+                    Title = "文章修改",
+                    GroupName = "CoreArticlePower"
+                },
+                 new Power
+                {
+                    Name = "CoreArticleDelete",
+                    Title = "文章删除",
+                    GroupName = "CoreArticlePower"
                 },
                 new Power
                 {

@@ -16,7 +16,7 @@
                         <f:Grid ID="Grid1" runat="server" ShowBorder="true" ShowHeader="false" EnableCheckBoxSelect="false" DataKeyNames="ID" AllowSorting="false" SortField="Name" SortDirection="DESC" AllowPaging="false" EnableMultiSelect="false" OnRowClick="Grid1_RowClick" EnableRowClickEvent="true">
                             <Columns>
                                 <f:RowNumberField></f:RowNumberField>
-                                <f:BoundField DataField="Name" ExpandUnusedSpace="true" DataSimulateTreeLevelField="TreeLevel" HeaderText="文档分类"></f:BoundField>
+                                <f:BoundField DataField="Name" ExpandUnusedSpace="true" DataSimulateTreeLevelField="TreeLevel" HeaderText="文章分类"></f:BoundField>
                             </Columns>
                         </f:Grid>
                     </Items>
@@ -46,7 +46,7 @@
                                         </f:Button>
                                         <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                         </f:ToolbarFill>
-                                        <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="true" OnClick="btnNew_Click" Text="添加文档">
+                                        <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="true" OnClick="btnNew_Click" Text="添加文章">
                                         </f:Button>
                                     </Items>
                                 </f:Toolbar>

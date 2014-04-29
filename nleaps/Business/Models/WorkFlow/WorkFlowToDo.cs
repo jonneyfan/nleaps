@@ -8,7 +8,7 @@ using System.Web;
 
 namespace nleaps.Business.Models.WorkFlow
 {
-    public class ToDo:IKeyID
+    public class WorkFlowToDo:IKeyID
     {
         [Key]
         public int ID { get; set; }

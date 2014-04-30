@@ -454,10 +454,12 @@
     <Content Include="library\Wilco.SyntaxHighlighter.dll" />
     <Content Include="main.aspx" />
     <Content Include="packages.config" />
+    <Content Include="WorkFlow\DesignForm.aspx" />
     <Content Include="WorkFlow\FormAdd.aspx" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.php" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.pl" />
+    <Content Include="WorkFlow\FormType.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4402,12 +4404,26 @@
     <Compile Include="WeiXin\wx.ashx.cs">
       <DependentUpon>wx.ashx</DependentUpon>
     </Compile>
+    <Compile Include="WorkFlow\DesignForm.aspx.cs">
+      <DependentUpon>DesignForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\DesignForm.aspx.designer.cs">
+      <DependentUpon>DesignForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WorkFlow\FormAdd.aspx.cs">
       <DependentUpon>FormAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WorkFlow\FormAdd.aspx.designer.cs">
       <DependentUpon>FormAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\FormType.aspx.cs">
+      <DependentUpon>FormType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\FormType.aspx.designer.cs">
+      <DependentUpon>FormType.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -34,8 +34,30 @@ namespace nleaps.admin
         {
             if (!IsPostBack)
             {
-              
+                LoadData();
+             
             }
+        }
+
+        private void LoadData()
+        {
+            btnClose.OnClientClick = ActiveWindow.GetHideReference();
+            BindDLL();
+        }
+
+        private void BindDLL()
+        {
+            List<ArticleCategory> articlecategorys = ResolveDDL<ArticleCategory>(ArticleCategoryHelper.ArticleCategorys);
+            // 绑定到下拉列表（启用模拟树功能）
+            ddlBox.EnableSimulateTree = true;
+            ddlBox.DataTextField = "Name";
+            ddlBox.DataValueField = "ID";
+            ddlBox.DataSimulateTreeLevelField = "TreeLevel";
+            ddlBox.DataSource = articlecategorys;
+            ddlBox.DataBind();
+
+            // 选中根节点
+            ddlBox.SelectedValue = "0";
         }
 
      
@@ -43,14 +65,45 @@ namespace nleaps.admin
         #endregion
 
         #region Events
-        protected void Button1_Click(object sender, EventArgs e)
+
+        private void SaveItem()
         {
-            
+            Article item = new Article();
+            item.Content = HtmlEditor1.Text;
+            item.Title = tbxTitle.Text.Trim();
+            item.CreateTime = DateTime.Now;
+            item.UpdateTime = DateTime.Now;
+            item.Name = tbxTitle.Text;
+            int parentID = Convert.ToInt32(ddlBox.SelectedValue);
+
+            if (parentID == -1)
+            {
+                item.ArticleCategory = null;
+            }
+            else
+            {
+                ArticleCategory articlecategory = Attach<ArticleCategory>(parentID);
+                item.ArticleCategory = articlecategory;
+            }
+
+
+            DB.Articles.Add(item);
+            DB.SaveChanges();
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void btnClose_Click(object sender, EventArgs e)
         {
-            HtmlEditor1.Text = "test";
+            btnClose.OnClientClick = ActiveWindow.GetHideReference();
+
+        }
+    
+
+        protected void btnSaveClose_Click(object sender, EventArgs e)
+        {
+            SaveItem();
+
+            //Alert.Show("添加成功！", String.Empty, ActiveWindow.GetHidePostBackReference());
+            PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
         }
         #endregion
 

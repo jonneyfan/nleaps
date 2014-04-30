@@ -20,7 +20,7 @@ namespace nleaps.admin
         {
             get
             {
-                return "CoreArticleList";
+                return "CoreArticleListView";
             }
         }
 
@@ -146,7 +146,7 @@ namespace nleaps.admin
         protected void Grid2_PreDataBound(object sender, EventArgs e)
         {
             // 数据绑定之前，进行权限检查
-            CheckPowerWithLinkButtonField("CoreArticleCategoryArticleDelete", Grid2, "deleteField");
+            CheckPowerWithLinkButtonField("CoreArticleDelete", Grid2, "deleteField");
         }
 
         protected void Grid2_Sort(object sender, GridSortEventArgs e)
@@ -165,7 +165,7 @@ namespace nleaps.admin
         protected void btnDeleteSelected_Click(object sender, EventArgs e)
         {
             // 在操作之前进行权限检查
-            if (!CheckPower("CoreArticleCategoryArticleDelete"))
+            if (!CheckPower("CoreArticleDelete"))
             {
                 CheckPowerFailWithAlert();
                 return;
@@ -202,7 +202,7 @@ namespace nleaps.admin
             if (e.CommandName == "Delete")
             {
                 // 在操作之前进行权限检查
-                if (!CheckPower("CoreArticleCategoryArticleDelete"))
+                if (!CheckPower("CoreArticleDelete"))
                 {
                     CheckPowerFailWithAlert();
                     return;
@@ -238,7 +238,7 @@ namespace nleaps.admin
             int articlecategoryID = GetSelectedDataKeyID(Grid1);
             string addUrl = String.Format("~/admin/article_new.aspx?id={0}", articlecategoryID);
 
-            PageContext.RegisterStartupScript(Window1.GetShowReference(addUrl, "添加文档到当前文档分类"));
+            PageContext.RegisterStartupScript(Window1.GetShowReference(addUrl, "文档添加"));
         }
 
         #endregion

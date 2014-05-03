@@ -29,9 +29,8 @@
                             <Items>
                                 <f:HtmlEditor runat="server" ID="HtmlEditor1">
                                 </f:HtmlEditor>
-                                <f:Button ID="btnClose" runat="server" OnClick="btnClose_Click" Text="关闭" Icon="SystemClose" EnablePostBack="false">
-                                </f:Button>
-                                <f:ToolbarSeparator ID="ToolbarSeparator1" runat="server"></f:ToolbarSeparator>
+                                <f:Button ID="btnClose" runat="server" OnClick="btnClose_Click" Text="关闭" Icon="SystemClose" EnablePostBack="false" CssClass="inline">
+                                </f:Button>  
                                 <f:Button ID="btnSaveClose" runat="server" OnClick="btnSaveClose_Click" Text="保存后关闭"  Icon="SystemSaveClose">
                                 </f:Button>
                             </Items>

@@ -20,7 +20,7 @@ namespace nleaps.admin
         {
             get
             {
-                return "CoreArticleListView";
+                return "CoreArticleList";
             }
         }
 
@@ -68,40 +68,22 @@ namespace nleaps.admin
 
         private void BindGrid2()
         {
-            int articlecategoryID = GetSelectedDataKeyID(Grid1);
 
-            if (articlecategoryID == -1)
+            IQueryable<Article> q = DB.Articles;
+            string searchText = ttbSearchTitle.Text.Trim();
+            if (!String.IsNullOrEmpty(searchText))
             {
-                Grid2.RecordCount = 0;
+                q = q.Where(a => a.Title.Contains(searchText));
 
-                Grid2.DataSource = null;
-                Grid2.DataBind();
             }
-            else
-            {
-                // 查询 X_Article 表
-                IQueryable<Article> q = DB.Articles.Include(a => a.ArticleCategory);
 
-                // 在文档标题中搜索
-                string searchText = ttbSearchTitle.Text.Trim();
-                if (!String.IsNullOrEmpty(searchText))
-                {
-                    q.Where(a => a.Title.Contains(searchText));
-                }
-
-                //过滤选中文档分类下的所有文档
-                q = q.Where(a => a.ArticleCategory.ID == articlecategoryID);
-                
-
-                // 在查询添加之后，排序和分页之前获取总记录数
                 Grid2.RecordCount = q.Count();
-
                 // 排列和分页
                 q = SortAndPage<Article>(q, Grid2);
 
                 Grid2.DataSource = q;
                 Grid2.DataBind();
-            }
+  
         }
 
 

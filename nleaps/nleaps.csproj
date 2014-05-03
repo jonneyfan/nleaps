@@ -4371,7 +4371,6 @@
     <Compile Include="Business\Models\User.cs" />
     <Compile Include="Business\Models\WorkFlow\WorkFlowToDo.cs" />
     <Compile Include="Business\Models\WorkFlow\WorkFlow.cs" />
-    <Compile Include="Business\Models\WorkFlow\WorkFlowLog.cs" />
     <Compile Include="Business\Models\WorkFlow\WorkFlowNode.cs" />
     <Compile Include="Business\Models\WorkFlow\WorkFlowWork.cs" />
     <Compile Include="Business\PageBase.cs">

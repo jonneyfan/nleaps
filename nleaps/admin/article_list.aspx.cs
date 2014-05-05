@@ -20,7 +20,7 @@ namespace nleaps.admin
         {
             get
             {
-                return "CoreArticleListView";
+                return "CoreArticleList";
             }
         }
 
@@ -86,7 +86,7 @@ namespace nleaps.admin
                 string searchText = ttbSearchTitle.Text.Trim();
                 if (!String.IsNullOrEmpty(searchText))
                 {
-                    q.Where(a => a.Title.Contains(searchText));
+                   q =q.Where(a => a.Title.Contains(searchText));
                 }
 
                 //过滤选中文档分类下的所有文档

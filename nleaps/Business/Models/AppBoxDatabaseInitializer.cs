@@ -19,6 +19,8 @@ namespace nleaps
             GetTitles().ForEach(t => context.Titles.Add(t));
 
             GetArticleCategorys().ForEach(a => context.ArticleCategorys.Add(a));
+            GetArticles().ForEach(aa => context.Articles.Add(aa));
+            GetFormTypes().ForEach(f => context.FormTypes.Add(f));
             //GetDocConsults().ForEach(d => context.DocConsults.Add(d));
             context.SaveChanges();
             // 添加菜单时需要指定ViewPower，所以上面需要先保存到数据库
@@ -45,10 +47,10 @@ namespace nleaps
                         },
                         new Menu
                         {
-                            Name = "文档分类",
+                            Name = "表单分类",
                             SortIndex = 140,
                             Remark = "二级菜单",
-                            NavigateUrl="~/admin/articlecategory.aspx",
+                            NavigateUrl="~/admin/formtype.aspx",
                             ImageUrl ="~/icon/tag_blue.png"
                         },
                          new Menu
@@ -599,6 +601,30 @@ namespace nleaps
                     Name = "CoreDocConsultDelete",
                     Title = "删除文件查阅",
                     GroupName = "CoreDocConsult"
+                } ,
+                new Power
+                {
+                    Name = "CoreFormTypeView",
+                    Title = "浏览表单分类列表",
+                    GroupName = "CoreFormType"
+                },
+                new Power
+                {
+                    Name = "CoreFormTypeNew",
+                    Title = "新增表单分类",
+                    GroupName = "CoreDocConsult"
+                },
+                new Power
+                {
+                    Name = "CoreFormTypeEdit",
+                    Title = "编辑表单分类",
+                    GroupName = "CoreFormType"
+                },
+                new Power
+                {
+                    Name = "CoreFormTypeDelete",
+                    Title = "删除表单分类",
+                    GroupName = "CoreFormType"
                 }
             };
 
@@ -924,6 +950,86 @@ namespace nleaps
 
             return doc_consults;
         }
+
+
+        private static List<FormType> GetFormTypes()
+        {
+            var formtypes = new List<FormType> { 
+                new FormType
+                {
+                    Name = "内务审核",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "生产管理",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "公文管理",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "单位管理",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "考勤管理",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "费用报销",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "申请借款",
+                    SortIndex = 1,
+                },
+                new FormType
+                {
+                    Name = "工作管理",
+                    SortIndex = 1,
+                },
+            };
+            return formtypes;
+        }
+
+
+
+        private static List<Article> GetArticles()
+        {
+            var articles = new List<Article> { 
+                new Article
+                {
+                    Title = "test1",
+                },
+                new Article
+                {
+                    Title = "test2",
+                },
+                new Article
+                {
+                    Title = "test3",
+                },
+                new Article
+                {
+                    Title = "test4",
+                },
+                new Article
+                {
+                    Title = "test5",
+                },
+            };
+
+            return articles;
+        }
+
+
 
 
     }

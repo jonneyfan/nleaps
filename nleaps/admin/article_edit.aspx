@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_new.aspx.cs" Inherits="nleaps.admin.article_new" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_edit.aspx.cs" Inherits="nleaps.admin.article_edit" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,6 @@
                                 <f:DropDownList Label="分类" AutoPostBack="false" Required="true" EnableSimulateTree="true"
                                     ShowRedStar="true" runat="server" ID="ddlBox">
                                 </f:DropDownList>
-                              
                             </Items>
                         </f:SimpleForm>
                     </Items>
@@ -44,4 +44,5 @@
     </form>
 </body>
 </html>
+
 

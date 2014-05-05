@@ -78,11 +78,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\articlecategory.aspx" />
+    <Content Include="admin\article_edit.aspx" />
     <Content Include="admin\article_list.aspx" />
     <Content Include="admin\article_new.aspx" />
     <Content Include="admin\articlecategory_edit.aspx" />
     <Content Include="admin\articlecategory_new.aspx" />
-    <Content Include="admin\article_view.aspx" />
     <Content Include="admin\config.aspx" />
     <Content Include="admin\default.aspx" />
     <Content Include="admin\dept.aspx" />
@@ -91,6 +91,9 @@
     <Content Include="admin\dept_user.aspx" />
     <Content Include="admin\dept_user_addnew.aspx" />
     <Content Include="admin\doc_consult.aspx" />
+    <Content Include="admin\formtype.aspx" />
+    <Content Include="admin\formtype_edit.aspx" />
+    <Content Include="admin\formtype_new.aspx" />
     <Content Include="admin\help\help.htm" />
     <Content Include="admin\help\jisuanqi.htm" />
     <Content Include="admin\help\wannianli.htm" />
@@ -4044,6 +4047,13 @@
     <Compile Include="admin\articlecategory.aspx.designer.cs">
       <DependentUpon>articlecategory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\article_edit.aspx.cs">
+      <DependentUpon>article_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\article_edit.aspx.designer.cs">
+      <DependentUpon>article_edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\article_list.aspx.cs">
       <DependentUpon>article_list.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4071,13 +4081,6 @@
     </Compile>
     <Compile Include="admin\articlecategory_new.aspx.designer.cs">
       <DependentUpon>articlecategory_new.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\article_view.aspx.cs">
-      <DependentUpon>article_view.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\article_view.aspx.designer.cs">
-      <DependentUpon>article_view.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\config.aspx.cs">
       <DependentUpon>config.aspx</DependentUpon>
@@ -4134,6 +4137,27 @@
     </Compile>
     <Compile Include="admin\doc_consult.aspx.designer.cs">
       <DependentUpon>doc_consult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\formtype.aspx.cs">
+      <DependentUpon>formtype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\formtype.aspx.designer.cs">
+      <DependentUpon>formtype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\formtype_edit.aspx.cs">
+      <DependentUpon>formtype_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\formtype_edit.aspx.designer.cs">
+      <DependentUpon>formtype_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\formtype_new.aspx.cs">
+      <DependentUpon>formtype_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\formtype_new.aspx.designer.cs">
+      <DependentUpon>formtype_new.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\log.aspx.cs">
       <DependentUpon>log.aspx</DependentUpon>
@@ -4348,6 +4372,7 @@
     <Compile Include="Business\Helper\ArticleCategoryHelper.cs" />
     <Compile Include="Business\Helper\ConfigHelper.cs" />
     <Compile Include="Business\Helper\DeptHelper.cs" />
+    <Compile Include="Business\Helper\FormTypeHelper.cs" />
     <Compile Include="Business\Helper\MenuHelper.cs" />
     <Compile Include="Business\Models\AppBoxContext.cs" />
     <Compile Include="Business\Models\AppBoxDatabaseInitializer.cs" />

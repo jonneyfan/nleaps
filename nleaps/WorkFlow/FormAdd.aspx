@@ -32,6 +32,8 @@
                                                      CssClass="mbutton" />
                                         <f:Button ID="Button5" Text="插入复选框" runat="server" OnClick="Button5_Click"
                                                      CssClass="mbutton" />
+                                        <f:Button ID="Button12" runat="server" OnClick="Button12_Click" Text="部门人员">
+                            </f:Button>
                                         <hr />
                                         <f:Label ID="Label3" EncodeText="false"  Text="<strong>宏控件</strong>" runat="server"></f:Label>
                                         

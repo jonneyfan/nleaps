@@ -27,8 +27,8 @@ namespace nleaps
 
         public DbSet<ArticleCategory> ArticleCategorys { get; set; }
         public DbSet<DocConsult> DocConsults { get; set; }
-        public DbSet<Form> Froms { get; set; }
-        public DbSet<FormType> FromTypes { get; set; }
+        public DbSet<Form> Forms { get; set; }
+        public DbSet<FormType> FormTypes { get; set; }
 
 
 

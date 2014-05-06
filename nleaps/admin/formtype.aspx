@@ -1,19 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="articlecategory.aspx.cs" Inherits="nleaps.admin.articlecategory" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="formtype.aspx.cs" Inherits="nleaps.admin.formtype" %>
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-     <f:PageManager ID="PageManager1" AutoSizePanelID="Panel1" runat="server" />
-      <f:Panel ID="Panel1" runat="server" BodyPadding="5px" 
+        <f:PageManager ID="PageManager1" AutoSizePanelID="Panel1" runat="server" />
+        <f:Panel ID="Panel1" runat="server" BodyPadding="5px" 
             ShowBorder="false" ShowHeader="false" Layout="Fit">
-          <Items>
-              <f:Grid ID="Grid1" runat="server" ShowBorder="true" ShowHeader="false" EnableCheckBoxSelect="false"
+            <Items>
+                <f:Grid ID="Grid1" runat="server" ShowBorder="true" ShowHeader="false" EnableCheckBoxSelect="false"
                     DataKeyNames="ID" OnPreDataBound="Grid1_PreDataBound"
                     OnRowCommand="Grid1_RowCommand" EnableMultiSelect="false">
                     <Toolbars>
@@ -21,32 +18,31 @@
                             <Items>
                                 <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                 </f:ToolbarFill>
-                                <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="false" Text="新增文裆类别">
+                                <f:Button ID="btnNew" runat="server" Icon="Add" EnablePostBack="false" Text="新增表单分类">
                                 </f:Button>
                             </Items>
                         </f:Toolbar>
                     </Toolbars>
                     <Columns>
                         <f:RowNumberField />
-                        <f:BoundField DataField="Name" HeaderText="类别名称" DataSimulateTreeLevelField="TreeLevel"
+                        <f:BoundField DataField="Name" HeaderText="表单分类名称" DataSimulateTreeLevelField="TreeLevel"
                             Width="150px" />
-                        <f:BoundField DataField="Remark" HeaderText="类别描述" ExpandUnusedSpace="true" />
-                        <f:BoundField DataField="sort" HeaderText="排序" Width="80px" />
-                        <f:BoundField DataField="CreateTime" SortField="CreateTime" DataFormatString="{0:yyyy-MM-dd HH:mm}"
-                        Width="150px" HeaderText="创建时间" />
+                        <f:BoundField DataField="Remark" HeaderText="表单分类描述" ExpandUnusedSpace="true" />
+                        <f:BoundField DataField="SortIndex" HeaderText="排序" Width="80px" />
                         <f:WindowField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑"
-                            WindowID="Window1" Title="编辑" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/articlecategory_edit.aspx?id={0}"
+                            WindowID="Window1" Title="编辑" DataIFrameUrlFields="ID" DataIFrameUrlFormatString="~/admin/formtype_edit.aspx?id={0}"
                             Width="50px" />
                         <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
                             ConfirmText="确定删除此记录？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
                     </Columns>
                 </f:Grid>
-          </Items>
-      </f:Panel>
-         <f:Window ID="Window1" CloseAction="Hide" runat="server" IsModal="true" Hidden="true"
+            </Items>
+        </f:Panel>
+        <f:Window ID="Window1" CloseAction="Hide" runat="server" IsModal="true" Hidden="true"
             Target="Top" EnableResize="true" EnableMaximize="true" EnableIFrame="true" IFrameUrl="about:blank"
             Width="650px" Height="450px" OnClose="Window1_Close">
         </f:Window>
     </form>
 </body>
 </html>
+

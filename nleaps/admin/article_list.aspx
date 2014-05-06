@@ -66,9 +66,9 @@
                             <Columns>
                                 <f:RowNumberField></f:RowNumberField>
                                 <f:BoundField DataField="Title" SortField="Title" Width="300px" HeaderText="标题" TextAlign="Center"></f:BoundField>
-                                <f:BoundField DataField="Author" SortField="Author" Width="100px" HeaderText="发布人"></f:BoundField>
+                                <f:BoundField DataField="Author" SortField="Author" Width="100px" HeaderText="发布人" ExpandUnusedSpace="true"></f:BoundField>
                                 <f:WindowField TextAlign="Center" Width="100px" WindowID="Window1" Icon="Pencil" 
-                                    ToolTip="编辑" DataIFrameUrlFields="Id,Name" DataIFrameUrlFormatString="~/admin/article_list_window.aspx?id={0}&name={1}" Title="编辑" IFrameUrl="~/article_edit.aspx" />
+                                    ToolTip="编辑" DataIFrameUrlFields="Id,Name" DataIFrameUrlFormatString="~/admin/article_edit.aspx?id={0}&name={1}" Title="编辑" IFrameUrl="~/article_edit.aspx" />
                                 <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除此文档" ConfirmText="确定删除此文档？" ConfirmTarget="Top" CommandName="Delete" Width="50px"></f:LinkButtonField>
                             </Columns>
                         </f:Grid>

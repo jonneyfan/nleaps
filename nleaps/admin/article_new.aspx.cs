@@ -58,6 +58,9 @@ namespace nleaps.admin
 
             // 选中根节点
             ddlBox.SelectedValue = "0";
+            DatePicker1.SelectedDate = DateTime.Now;
+            tbxAuthor.Text = User.Identity.Name;
+    
         }
 
      
@@ -73,7 +76,8 @@ namespace nleaps.admin
             item.Title = tbxTitle.Text.Trim();
             item.CreateTime = DateTime.Now;
             item.UpdateTime = DateTime.Now;
-            item.Name = tbxTitle.Text;
+            item.ReleaseDept = tbxReleaseDept.Text.Trim();
+            item.Author = tbxAuthor.Text.Trim();
             int parentID = Convert.ToInt32(ddlBox.SelectedValue);
 
             if (parentID == -1)
@@ -106,6 +110,7 @@ namespace nleaps.admin
             PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
         }
         #endregion
+
 
 
     }

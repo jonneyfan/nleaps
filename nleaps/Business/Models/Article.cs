@@ -15,6 +15,10 @@ namespace nleaps
         public string Title { get; set; }
         [StringLength(50)]
         public string Name { get; set; }
+        [StringLength(50)]
+        public string ReleaseDept { get; set; }
+        [StringLength(50)]
+        public string Author { get; set; }
         public DateTime? CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }
   

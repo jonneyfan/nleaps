@@ -1,30 +1,34 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_new.aspx.cs" Inherits="nleaps.admin.article_new" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="nleaps.admin.WebForm1" %>
 
 <!DOCTYPE html>
-<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body onload='javascript:document.getElementById("TANGER_OCX").OpenFromURL("1.doc",true);'>
     <form id="form1" runat="server">
-        <f:PageManager ID="PageManager1" runat="server" AutoSizePanelID="Toolbar1"/>
-
-        <f:Panel ID="Panel1" BodyPadding="5px" runat="server" EnableCollapse="true" ShowHeader="false" AutoScroll="true" >
-            <Toolbars>
-                <f:Toolbar ID="Toolbar1" runat="server">
-                    <Items>
-                        <f:Button ID="btnClose" Icon="SystemClose" EnablePostBack="false" runat="server"
-                            Text="关闭">
-                        </f:Button>
-                        <f:ToolbarSeparator ID="ToolbarSeparator2" runat="server">
-                        </f:ToolbarSeparator>
-                        <f:Button ID="btnSaveClose" ValidateForms="SimpleForm1" Icon="SystemSaveClose"
-                            OnClick="btnSaveClose_Click" runat="server" Text="保存后关闭">
-                        </f:Button>
-                    </Items>
-                </f:Toolbar>
-            </Toolbars>
-            <Items>
+        
+        
+    <f:PageManager ID="PageManager1" runat="server" AutoSizePanelID="tsMain"/>
+      <f:Panel ID="Panel1" BodyPadding="5px" runat="server" EnableCollapse="true" ShowHeader="false" AutoScroll="true" >
+        <Toolbars>
+            <f:Toolbar ID="tsMain" runat="server">
+                <Items>
+                    <f:Button ID="btnClose" EnablePostBack="false" Text="关闭" OnClientClick="Exit();"
+                        runat="server" Icon="SystemClose" />
+                    <f:ToolbarSeparator runat="server" />
+                    <f:Button ID="btnSave" Text="保存" runat="server" ValidateForms="simpleForm" ValidateMessageBox="false"
+                        OnClientClick="SaveDoc();" Icon="SystemSave" />
+                    <f:ToolbarSeparator runat="server" />
+                    <f:Button ID="btnSaveExit" Text="保存退出" runat="server" ValidateForms="simpleForm"
+                        ValidateMessageBox="false" OnClientClick="SaveExit();" Icon="SystemSaveClose" />
+                    <f:ToolbarFill ID="ToolbarFill1" runat="server" />
+                </Items>
+            </f:Toolbar>
+        </Toolbars>
+             <Items>
                 <f:GroupPanel ID="GroupPanel1" runat="server" EnableCollapse="true" Title="概述">
                     <Items>
                         <f:SimpleForm ID="SimpleForm1" runat="server"  ShowBorder="false" ShowHeader="false" BodyPadding="5px" EnableCollapse="true" >
@@ -44,8 +48,8 @@
                     </Items>
                 </f:GroupPanel>
             </Items>
-        </f:Panel>
-         <object id="TANGER_OCX" style="width: 100%; height: 400px; border:0px solid #eee;" codeBase="OfficeControl.cab#version=5,0,1,1"
+    </f:Panel>
+<object id="TANGER_OCX" style="width: 100%; height: 96%; border:0px solid #eee;" codeBase="OfficeControl.cab#version=5,0,1,1"
                     classid="clsid:C9BC4DFF-4248-4a3c-8A49-63A7D317F404" name="TANGER_OCX">
                     <param name="_ExtentX" value="25241">
                     <param name="_ExtentY" value="24183">
@@ -93,4 +97,3 @@
     </form>
 </body>
 </html>
-

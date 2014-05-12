@@ -83,7 +83,6 @@ namespace nleaps
         private void LoginSuccess(User user)
         {
             RegisterOnlineUser(user);
-
             // 用户所属的角色字符串，以逗号分隔
             string roleIDs = String.Empty;
             if (user.Roles != null)

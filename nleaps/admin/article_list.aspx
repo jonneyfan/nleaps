@@ -4,7 +4,7 @@
 <html>
 <head runat="server">
     <title></title>
-    
+    <script src="/res/js/common.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">

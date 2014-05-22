@@ -169,7 +169,8 @@ namespace nleaps
                 node.IconUrl = menu.ImageUrl;
                 if (!String.IsNullOrEmpty(menu.NavigateUrl))
                 {
-                    node.EnablePostBack = false;
+                    node.EnableClickEvent = false;
+                    //node.EnablePostBack = false;
                     node.NavigateUrl = ResolveUrl(menu.NavigateUrl);
                     //node.OnClientClick = String.Format("addTab('{0}','{1}','{2}')", node.NodeID, ResolveUrl(menu.NavigateUrl), node.Text.Replace("'", ""));
                 }

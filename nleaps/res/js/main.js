@@ -73,6 +73,9 @@
         // refreshWhenExist： 添加选项卡时，如果选项卡已经存在，是否刷新内部IFrame
         F.util.addMainTab(mainTabStrip, id, url, text, icon, null, refreshWhenExist);
     };
+    window.addScriptTab = function (node) {
+        F.util.addMainTab(mainTabStrip, node.id, node.url, node.text, node.icon, null, node.refreshWhenExist);
+    }
 
     window.removeActiveTab = function () {
         var activeTab = mainTabStrip.getActiveTab();

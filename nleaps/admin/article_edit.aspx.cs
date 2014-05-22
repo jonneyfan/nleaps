@@ -26,7 +26,8 @@ namespace nleaps.admin
 
         #endregion
 
-        #region Page_Load
+        #region Page_Load 
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -73,6 +74,11 @@ namespace nleaps.admin
         }
 
         #endregion
+
+        protected void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
 
     }
 }

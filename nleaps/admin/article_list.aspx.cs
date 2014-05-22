@@ -237,9 +237,9 @@ namespace nleaps.admin
         protected void btnNew_Click(object sender, EventArgs e)
         {
             int articlecategoryID = GetSelectedDataKeyID(Grid1);
-            string addUrl = String.Format("~/admin/article_new.aspx?id={0}", articlecategoryID);
-
-            PageContext.RegisterStartupScript(Window1.GetShowReference(addUrl, "文档添加"));
+            string addUrl = String.Format("admin/article_new.aspx?id={0}", articlecategoryID);
+            PageContext.RegisterStartupScript("openTab('ProcessList','节点管理-文档添加','"+addUrl+"');");
+           // PageContext.RegisterStartupScript(Window1.GetShowReference(addUrl, "文档添加"));
         }
 
         #endregion

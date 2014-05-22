@@ -10,7 +10,7 @@
 namespace nleaps.admin {
     
     
-    public partial class article_new {
+    public partial class articleedit {
         
         /// <summary>
         /// form1 控件。
@@ -137,5 +137,32 @@ namespace nleaps.admin {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::FineUI.TextBox tbxAuthor;
+        
+        /// <summary>
+        /// GroupPanel2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.GroupPanel GroupPanel2;
+        
+        /// <summary>
+        /// SimpleForm2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.SimpleForm SimpleForm2;
+        
+        /// <summary>
+        /// HtmlEditor1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.HtmlEditor HtmlEditor1;
     }
 }

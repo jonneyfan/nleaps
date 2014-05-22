@@ -742,7 +742,7 @@ F.customEvent = function (argument, validate) {
 
             // 向document.body添加主题类
             if (themeName) {
-                Ext.getBody().addCls('theme-' + themeName);
+                Ext.getBody().addCls('f-theme-' + themeName);
             }
 
             if (Ext.form.field) {
@@ -2337,8 +2337,23 @@ F.customEvent = function (argument, validate) {
 
         // 返回当前活动Window组件对象（浏览器窗口对象通过F.wnd.getActiveWindow().window获取）
         getActiveWindow: function () {
+
+            // Ext.WindowManager.getActive();有可能返回一个弹出对话框
+            function getActiveFineUIWindow(wnd) {
+                var result = wnd.Ext.WindowManager.getActive();
+                if (!result.f_property_guid) {
+                    wnd.Ext.WindowManager.eachTopDown(function (cmp) {
+                        if (cmp.f_property_guid) {
+                            result = cmp;
+                            return false;
+                        }
+                    });
+                }
+                return result;
+            }
+
             var activeWindow = parent.window;
-            var activeExtWindow = parent.Ext.WindowManager.getActive(); //parent.F.f_window_manager.getActive();
+            var activeExtWindow = getActiveFineUIWindow(activeWindow);
             if (activeExtWindow) {
                 if (activeExtWindow['f_property_window']) {
                     activeWindow = activeExtWindow['f_property_window'];
@@ -3394,20 +3409,22 @@ if (Ext.tree.Panel) {
                 // 12 - iconUrl
                 // 13 - ToolTip
                 // 14 - OnClientClick
-                // 15 - EnablePostBack
-                // 16 - AutoPostBack
-                // 17 - CommandName
-                // 18 - CommandArgument
-                // 19 - Nodes
+                // 15 - EnableClickEvent
+                // 16 - CommandName
+                // 17 - CommandArgument
+
+                // 18 - EnableCheckEvent
+                // 19 - EnableExpandEvent
+                // 20 - EnableCollapseEvent
+                
+                // 21 - Nodes
                 node.text = data[0];
                 node.leaf = !!data[1];
                 node.id = data[2];
                 node.disabled = !data[3];
                 if (!!data[4]) {
+                    // node.checked === undefined, no checkbox
                     node.checked = !!data[5];
-                    if (!!data[16]) {
-                        node.f_autopostback = true;
-                    }
                 }
                 if (!data[1]) {
                     node.expanded = !!data[6];
@@ -3424,48 +3441,19 @@ if (Ext.tree.Panel) {
                 if (data[14]) {
                     node.f_clientclick = data[14];
                 }
-                node.f_enablepostback = !!data[15];
-                node.f_commandname = data[17];
-                node.f_commandargument = data[18];
+                node.f_enableclickevent = !!data[15];
+                node.f_commandname = data[16];
+                node.f_commandargument = data[17];
 
-                if (data[19] && data[19].length > 0) {
-                    node.children = that.f_tranformData(data[19]);
-                }
+                node.f_enablecheckevent = !!data[18];
 
-
-                /*
-                node.listeners = {};
-
-                if (!data[3]) {
-                    node.listeners.beforeclick = function () {
-                        return false;
-                    };
-                }
-                
-                if (!!data[4] && !!data[17]) {
-                    node.listeners.checkchange = function (node, checked) {
-                        var args = 'Check$' + node.id + '$' + checked;
-                        __doPostBack(that.name, args);
-                    };
-                }
-                
-
-                var clickScript = '';
-                if (data[15]) {
-                    clickScript += data[15] + ';';
-                }
-                if (!!data[16]) {
-                    clickScript += "__doPostBack('" + that.name + "', 'Command$" + node.id + "$" + data[18] + "$" + data[19] + "');";
-                }
-                if (clickScript) {
-                    node.listeners.click = new Function('node', clickScript);
-                }
+                node.f_enableexpandevent = !!data[19];
+                node.f_enablecollapseevent = !!data[20];
 
 
-                if (data[20] && data[20].length > 0) {
-                    node.children = that.f_tranformData(data[20]);
+                if (data[21] && data[21].length > 0) {
+                    node.children = that.f_tranformData(data[21]);
                 }
-                */
 
                 nodes.push(node);
             }
@@ -3591,7 +3579,9 @@ if (Ext.tab.Panel) {
         },
 
         addTab: function (id, url, title, closable) {
-            var options = {}, tab;
+            var options = {
+                'cls': 'f-tab'
+            }, tab;
             if (typeof (id) === 'string') {
                 Ext.apply(options, {
                     'id': id,
@@ -3705,6 +3695,12 @@ if (Ext.window.Window) {
 
         },
         f_show: function (iframeUrl, windowTitle, width, height) {
+            if (typeof (iframeUrl) === 'undefined') {
+                iframeUrl = this.f_iframe_url;
+            }
+            if (typeof (windowTitle) === 'undefined') {
+                windowTitle = this.title;
+            }
             F.wnd.show(this, iframeUrl, windowTitle, this.f_property_left, this.f_property_top, this.f_property_position, this.id + '_Hidden', width, height);
         },
 
@@ -3999,10 +3995,10 @@ Ext.define('Ext.ux.FormViewport', {
             html = document.body.parentNode,
             el = me.el = Ext.getBody();
 
-        /////��ʼ �޸ĵ�һ/////////////////////////////
+        /////��ʼ �޸ĵ�һ/////////////////////////////
         el = me.el = Ext.get(me.renderTo);
         var body = Ext.getBody();
-        /////���� �޸ĵ�һ/////////////////////////////
+        /////���� �޸ĵ�һ/////////////////////////////
 
 
         // Get the DOM disruption over with before the Viewport renders and begins a layout

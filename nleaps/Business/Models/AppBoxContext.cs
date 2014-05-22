@@ -9,9 +9,10 @@ namespace nleaps
 {
     public class nleapsContext : DbContext
     {
-        //public nleapsContext() : base("MySQL")
-        //{
-        //}
+        public nleapsContext()
+            : base("name=MySQL")
+        {
+        }
 
         public DbSet<Config> Configs { get; set; }
         public DbSet<Dept> Depts { get; set; }

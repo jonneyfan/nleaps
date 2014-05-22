@@ -24,10 +24,6 @@ namespace nleaps
 
         public virtual ICollection<ArticleCategory> Children { get; set; }
 
-
-
-
-
         /// <summary>
         /// 菜单在树形结构中的层级（从0开始）
         /// </summary>

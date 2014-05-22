@@ -33,6 +33,518 @@ namespace nleaps
             var menus = new List<Menu> { 
                 new Menu
                 {
+                    Name = "专题链接",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "视频点播",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Study/vod.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "在线学习",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Study/online_study.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "纪律教育学习",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "http://www.duanzhou.gov.cn/new/new2009/zt/jw/jw2010.html",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "提示区",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "通知",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Notice/notice_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "内部邮件",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Imail/imail_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办发文-阅批",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/SendDoc/senddoc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办收文-阅批",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/RecDoc/recdoc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办发文-会签",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/SendDoc/sendsign_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办发文-传阅",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/SendDoc/sendcopy_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办收文-传阅",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/RecDoc/reccopy_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "待办收文-阅处",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/RecDoc/recview_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "文件查阅",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "国家文件",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Doc/doc_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "省文件",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Doc/doc_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "市文件",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "区委文件",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "区府文件",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "区会议纪要文件",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "部门文件",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "教育实践活动文件",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Doc/doc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "简报和信息",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "工作通报",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Publication/publication_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "端州信息",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Publication/publication_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州通讯",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州督查",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州社工",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州人大",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "政府工作简报",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州政务督查",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "政协简报",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Publication/publication_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "端州纪检监察",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Publication/publication_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "组工通讯",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "端州统战",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "宣传动态",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "政策研究",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "统计分析",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "部门刊物",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "镇办刊物",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Publication/publication_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "日常工作",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "手机短信",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/FreeSms/SendSms.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "电子邮件",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Imail/imail_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "通知",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Notice/notice_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "公共通讯录",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/PubCom/PubCom_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "部门网络硬盘",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/NetDisk/PubNetDisk_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "中心组理论学习园",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Study/CenTheoryStudy.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                 new Menu
+                {
+                    Name = "公文管理",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "发文办理",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/SendDoc/SendDoc_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "收文办理",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/RecDoc/RecDoc_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "发文阅办记录",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/RegisterDoc/RegisterDoc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "收文阅办记录",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/RecDocRecord/RecDocRecord_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "档案管理",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Archive/Archive_tree.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "文件格式",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/FavDoc/FavDoc_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "个人事务",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "个人通讯录",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/MyCom/MyCom_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "个人网络硬盘",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/MyNetDisk/MyNetDisk_tree.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "密码修改",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/admin/ChangePassword.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "个性设置",
+                            SortIndex = 160,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Personal/PersonalCustom.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "常用意见设置",
+                            SortIndex = 170,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/Personal/Personal_list.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
+                    Name = "系统服务",
+                    SortIndex = 1,
+                    Remark = "顶级菜单",
+                    Children = new List<Menu> {
+                         new Menu
+                        {
+                            Name = "协助维护申请",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/Service/service_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                        new Menu
+                        {
+                            Name = "系统公告",
+                            SortIndex = 140,
+                            Remark = "二级菜单",
+                            NavigateUrl="~/SysNotice/SysNotice_list.aspx",
+                            ImageUrl ="~/icon/tag_blue.png"
+                        },
+                         new Menu
+                        {
+                            Name = "系统维护",
+                            SortIndex = 150,
+                            Remark = "二级菜单",
+                            NavigateUrl = "~/System/SysAdmin.aspx",
+                            ImageUrl = "~/icon/tag_blue.png"
+                        }
+                    }
+                },
+                new Menu
+                {
                     Name = "工作流管理",
                     SortIndex = 1,
                     Remark = "顶级菜单",

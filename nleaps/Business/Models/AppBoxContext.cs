@@ -10,7 +10,7 @@ namespace nleaps
     public class nleapsContext : DbContext
     {
         public nleapsContext()
-            : base("name=MySQL")
+            : base("name=MsSQL")
         {
         }
 

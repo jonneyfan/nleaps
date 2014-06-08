@@ -119,6 +119,7 @@
     <Content Include="admin\title_new.aspx" />
     <Content Include="admin\title_user.aspx" />
     <Content Include="admin\title_user_addnew.aspx" />
+    <Content Include="admin\ueditor.aspx" />
     <Content Include="admin\user.aspx" />
     <Content Include="admin\user_changepassword.aspx" />
     <Content Include="admin\user_edit.aspx" />
@@ -2302,13 +2303,11 @@
     <Content Include="res\ueditor\dialogs\anchor\anchor.html" />
     <Content Include="res\ueditor\dialogs\attachment\attachment.css" />
     <Content Include="res\ueditor\dialogs\attachment\attachment.html" />
-    <Content Include="res\ueditor\dialogs\attachment\attachment.js" />
     <Content Include="res\ueditor\dialogs\attachment\callbacks.js" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
-    <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
@@ -2318,32 +2317,9 @@
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
     <Content Include="res\ueditor\dialogs\attachment\fileTypeMaps.js" />
-    <Content Include="res\ueditor\dialogs\attachment\images\alignicon.gif" />
-    <Content Include="res\ueditor\dialogs\attachment\images\alignicon.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\bg.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\file-icons.gif" />
-    <Content Include="res\ueditor\dialogs\attachment\images\file-icons.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\icons.gif" />
-    <Content Include="res\ueditor\dialogs\attachment\images\icons.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\image.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\progress.png" />
-    <Content Include="res\ueditor\dialogs\attachment\images\success.gif" />
-    <Content Include="res\ueditor\dialogs\attachment\images\success.png" />
     <Content Include="res\ueditor\dialogs\background\background.css" />
     <Content Include="res\ueditor\dialogs\background\background.html" />
     <Content Include="res\ueditor\dialogs\background\background.js" />
-    <Content Include="res\ueditor\dialogs\background\images\bg.png" />
-    <Content Include="res\ueditor\dialogs\background\images\success.png" />
-    <Content Include="res\ueditor\dialogs\charts\chart.config.js" />
-    <Content Include="res\ueditor\dialogs\charts\charts.css" />
-    <Content Include="res\ueditor\dialogs\charts\charts.html" />
-    <Content Include="res\ueditor\dialogs\charts\charts.js" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts0.png" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts1.png" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts2.png" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts3.png" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts4.png" />
-    <Content Include="res\ueditor\dialogs\charts\images\charts5.png" />
     <Content Include="res\ueditor\dialogs\emotion\emotion.css" />
     <Content Include="res\ueditor\dialogs\emotion\emotion.html" />
     <Content Include="res\ueditor\dialogs\emotion\emotion.js" />
@@ -2713,28 +2689,18 @@
     <Content Include="res\ueditor\dialogs\image\image.css" />
     <Content Include="res\ueditor\dialogs\image\image.html" />
     <Content Include="res\ueditor\dialogs\image\image.js" />
-    <Content Include="res\ueditor\dialogs\image\images\alignicon.jpg" />
-    <Content Include="res\ueditor\dialogs\image\images\bg.png" />
     <Content Include="res\ueditor\dialogs\image\images\center_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\image\images\icons.gif" />
-    <Content Include="res\ueditor\dialogs\image\images\icons.png" />
-    <Content Include="res\ueditor\dialogs\image\images\image.png" />
     <Content Include="res\ueditor\dialogs\image\images\left_focus.jpg" />
     <Content Include="res\ueditor\dialogs\image\images\none_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\image\images\progress.png" />
     <Content Include="res\ueditor\dialogs\image\images\right_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\image\images\success.gif" />
-    <Content Include="res\ueditor\dialogs\image\images\success.png" />
     <Content Include="res\ueditor\dialogs\image\imageUploader.swf" />
     <Content Include="res\ueditor\dialogs\insertframe\insertframe.html" />
     <Content Include="res\ueditor\dialogs\internal.js" />
     <Content Include="res\ueditor\dialogs\link\link.html" />
     <Content Include="res\ueditor\dialogs\map\map.html" />
-    <Content Include="res\ueditor\dialogs\map\show.html" />
     <Content Include="res\ueditor\dialogs\music\music.css" />
     <Content Include="res\ueditor\dialogs\music\music.html" />
     <Content Include="res\ueditor\dialogs\music\music.js" />
-    <Content Include="res\ueditor\dialogs\preview\preview.html" />
     <Content Include="res\ueditor\dialogs\scrawl\images\addimg.png" />
     <Content Include="res\ueditor\dialogs\scrawl\images\brush.png" />
     <Content Include="res\ueditor\dialogs\scrawl\images\delimg.png" />
@@ -2776,29 +2742,18 @@
     <Content Include="res\ueditor\dialogs\template\template.css" />
     <Content Include="res\ueditor\dialogs\template\template.html" />
     <Content Include="res\ueditor\dialogs\template\template.js" />
-    <Content Include="res\ueditor\dialogs\video\images\bg.png" />
     <Content Include="res\ueditor\dialogs\video\images\center_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\video\images\file-icons.gif" />
-    <Content Include="res\ueditor\dialogs\video\images\file-icons.png" />
-    <Content Include="res\ueditor\dialogs\video\images\icons.gif" />
-    <Content Include="res\ueditor\dialogs\video\images\icons.png" />
-    <Content Include="res\ueditor\dialogs\video\images\image.png" />
     <Content Include="res\ueditor\dialogs\video\images\left_focus.jpg" />
     <Content Include="res\ueditor\dialogs\video\images\none_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\video\images\progress.png" />
     <Content Include="res\ueditor\dialogs\video\images\right_focus.jpg" />
-    <Content Include="res\ueditor\dialogs\video\images\success.gif" />
-    <Content Include="res\ueditor\dialogs\video\images\success.png" />
     <Content Include="res\ueditor\dialogs\video\video.css" />
     <Content Include="res\ueditor\dialogs\video\video.html" />
     <Content Include="res\ueditor\dialogs\video\video.js" />
     <Content Include="res\ueditor\dialogs\webapp\webapp.html" />
     <Content Include="res\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
     <Content Include="res\ueditor\dialogs\wordimage\imageUploader.swf" />
-    <Content Include="res\ueditor\dialogs\wordimage\tangram.js" />
     <Content Include="res\ueditor\dialogs\wordimage\wordimage.html" />
     <Content Include="res\ueditor\dialogs\wordimage\wordimage.js" />
-    <Content Include="res\ueditor\index.html" />
     <Content Include="res\ueditor\lang\en\en.js" />
     <Content Include="res\ueditor\lang\en\images\addimage.png" />
     <Content Include="res\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
@@ -2823,12 +2778,7 @@
     <Content Include="res\ueditor\lang\zh-cn\images\music.png" />
     <Content Include="res\ueditor\lang\zh-cn\images\upload.png" />
     <Content Include="res\ueditor\lang\zh-cn\zh-cn.js" />
-    <Content Include="res\ueditor\net\Bin\Newtonsoft.Json.dll" />
-    <Content Include="res\ueditor\net\Bin\Newtonsoft.Json.pdb" />
-    <Content Include="res\ueditor\net\Bin\Newtonsoft.Json.xml" />
-    <Content Include="res\ueditor\net\net.sln" />
     <Content Include="res\ueditor\themes\default\css\ueditor.css" />
-    <Content Include="res\ueditor\themes\default\css\ueditor.min.css" />
     <Content Include="res\ueditor\themes\default\dialogbase.css" />
     <Content Include="res\ueditor\themes\default\iframe.css" />
     <Content Include="res\ueditor\themes\default\images\anchor.gif" />
@@ -2838,7 +2788,6 @@
     <Content Include="res\ueditor\themes\default\images\button-bg.gif" />
     <Content Include="res\ueditor\themes\default\images\cancelbutton.gif" />
     <Content Include="res\ueditor\themes\default\images\center_focus.jpg" />
-    <Content Include="res\ueditor\themes\default\images\charts.png" />
     <Content Include="res\ueditor\themes\default\images\cursor_h.gif" />
     <Content Include="res\ueditor\themes\default\images\cursor_h.png" />
     <Content Include="res\ueditor\themes\default\images\cursor_v.gif" />
@@ -2851,8 +2800,6 @@
     <Content Include="res\ueditor\themes\default\images\icons.png" />
     <Content Include="res\ueditor\themes\default\images\left.jpg" />
     <Content Include="res\ueditor\themes\default\images\left_focus.jpg" />
-    <Content Include="res\ueditor\themes\default\images\loaderror.png" />
-    <Content Include="res\ueditor\themes\default\images\loading.gif" />
     <Content Include="res\ueditor\themes\default\images\lock.gif" />
     <Content Include="res\ueditor\themes\default\images\logo.png" />
     <Content Include="res\ueditor\themes\default\images\menu\sparator_v.png" />
@@ -2863,7 +2810,6 @@
     <Content Include="res\ueditor\themes\default\images\right.jpg" />
     <Content Include="res\ueditor\themes\default\images\right_focus.jpg" />
     <Content Include="res\ueditor\themes\default\images\scale.png" />
-    <Content Include="res\ueditor\themes\default\images\sortable.png" />
     <Content Include="res\ueditor\themes\default\images\spacer.gif" />
     <Content Include="res\ueditor\themes\default\images\sparator_v.png" />
     <Content Include="res\ueditor\themes\default\images\table-cell-align.png" />
@@ -2884,42 +2830,6 @@
     <Content Include="res\ueditor\third-party\codemirror2.15\codemirror.js" />
     <Content Include="res\ueditor\third-party\codemirror\codemirror.css" />
     <Content Include="res\ueditor\third-party\codemirror\codemirror.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
-    <Content Include="res\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\highcharts-more.js" />
-    <Content Include="res\ueditor\third-party\highcharts\highcharts-more.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\highcharts.js" />
-    <Content Include="res\ueditor\third-party\highcharts\highcharts.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\annotations.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\annotations.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\canvas-tools.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\data.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\data.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\drilldown.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\drilldown.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\exporting.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\exporting.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\funnel.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\funnel.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\heatmap.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\heatmap.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\map.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\map.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
-    <Content Include="res\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
-    <Content Include="res\ueditor\third-party\highcharts\themes\dark-blue.js" />
-    <Content Include="res\ueditor\third-party\highcharts\themes\dark-green.js" />
-    <Content Include="res\ueditor\third-party\highcharts\themes\gray.js" />
-    <Content Include="res\ueditor\third-party\highcharts\themes\grid.js" />
-    <Content Include="res\ueditor\third-party\highcharts\themes\skies.js" />
-    <Content Include="res\ueditor\third-party\jquery-1.10.2.js" />
-    <Content Include="res\ueditor\third-party\jquery-1.10.2.min.js" />
-    <Content Include="res\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
     <Content Include="res\ueditor\third-party\swfupload\fileprogress.js" />
     <Content Include="res\ueditor\third-party\swfupload\swfupload.cookies.js" />
     <Content Include="res\ueditor\third-party\swfupload\swfupload.js" />
@@ -2930,32 +2840,10 @@
     <Content Include="res\ueditor\third-party\swfupload\swfupload_fp9.swf" />
     <Content Include="res\ueditor\third-party\SyntaxHighlighter\shCore.js" />
     <Content Include="res\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
-    <Content Include="res\ueditor\third-party\video-js\font\vjs.svg" />
-    <Content Include="res\ueditor\third-party\video-js\video-js.css" />
-    <Content Include="res\ueditor\third-party\video-js\video-js.min.css" />
-    <Content Include="res\ueditor\third-party\video-js\video-js.swf" />
-    <Content Include="res\ueditor\third-party\video-js\video.dev.js" />
-    <Content Include="res\ueditor\third-party\video-js\video.js" />
-    <Content Include="res\ueditor\third-party\webuploader\Uploader.swf" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.css" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.custom.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.custom.min.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.flashonly.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.html5only.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.min.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
-    <Content Include="res\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
-    <Content Include="res\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
-    <Content Include="res\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
-    <Content Include="res\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
     <Content Include="res\ueditor\ueditor.all.js" />
     <Content Include="res\ueditor\ueditor.all.min.js" />
     <Content Include="res\ueditor\ueditor.config.js" />
     <Content Include="res\ueditor\ueditor.parse.js" />
-    <Content Include="res\ueditor\ueditor.parse.min.js" />
     <Content Include="WorkFlow\DesignForm.aspx" />
     <Content Include="WorkFlow\FormAdd.aspx" />
     <Content Include="fckeditor\editor\dialog\fck_spellerpages\spellerpages\server-scripts\spellchecker.cfm" />
@@ -2970,14 +2858,6 @@
     <Content Include="res\ueditor\net\imageUp.ashx" />
     <Content Include="res\ueditor\net\scrawlUp.ashx" />
     <Content Include="res\ueditor\net\upload\web.config" />
-    <Content Include="res\ueditor\net\config.json" />
-    <Content Include="res\ueditor\net\controller.ashx" />
-    <Content Include="res\ueditor\net\README.md" />
-    <Content Include="res\ueditor\net\Web.config" />
-    <Content Include="res\ueditor\third-party\jquery-1.10.2.min.map" />
-    <Content Include="res\ueditor\third-party\video-js\font\vjs.eot" />
-    <Content Include="res\ueditor\third-party\video-js\font\vjs.ttf" />
-    <Content Include="res\ueditor\third-party\video-js\font\vjs.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4986,6 +4866,13 @@
     <Compile Include="admin\title_user_addnew.aspx.designer.cs">
       <DependentUpon>title_user_addnew.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\ueditor.aspx.cs">
+      <DependentUpon>ueditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ueditor.aspx.designer.cs">
+      <DependentUpon>ueditor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\user.aspx.cs">
       <DependentUpon>user.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5102,14 +4989,6 @@
       <DependentUpon>main.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="res\ueditor\net\App_Code\Config.cs" />
-    <Compile Include="res\ueditor\net\App_Code\ConfigHandler.cs" />
-    <Compile Include="res\ueditor\net\App_Code\CrawlerHandler.cs" />
-    <Compile Include="res\ueditor\net\App_Code\Handler.cs" />
-    <Compile Include="res\ueditor\net\App_Code\ListFileHandler.cs" />
-    <Compile Include="res\ueditor\net\App_Code\NotSupportedHandler.cs" />
-    <Compile Include="res\ueditor\net\App_Code\PathFormater.cs" />
-    <Compile Include="res\ueditor\net\App_Code\UploadHandler.cs" />
     <Compile Include="res\ueditor\net\fileUp.ashx.cs">
       <DependentUpon>fileUp.ashx</DependentUpon>
     </Compile>

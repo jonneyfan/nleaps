@@ -31,30 +31,66 @@ namespace nleaps.admin {
         protected global::FineUI.PageManager PageManager1;
         
         /// <summary>
-        /// ContentPanel1 控件。
+        /// SimpleForm1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.ContentPanel ContentPanel1;
+        protected global::FineUI.SimpleForm SimpleForm1;
         
         /// <summary>
-        /// Button2 控件。
+        /// tbxTitle 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button2;
+        protected global::FineUI.TextBox tbxTitle;
         
         /// <summary>
-        /// Button1 控件。
+        /// ddlBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUI.Button Button1;
+        protected global::FineUI.DropDownList ddlBox;
+        
+        /// <summary>
+        /// tbxReleaseDept 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.TextBox tbxReleaseDept;
+        
+        /// <summary>
+        /// DatePicker1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.DatePicker DatePicker1;
+        
+        /// <summary>
+        /// tbxAuthor 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.TextBox tbxAuthor;
+        
+        /// <summary>
+        /// Toolbar1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUI.Toolbar Toolbar1;
     }
 }

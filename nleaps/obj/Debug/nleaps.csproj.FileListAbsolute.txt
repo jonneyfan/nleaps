@@ -29,3 +29,4 @@ C:\Users\jonney\Source\Repos\nleaps\nleaps\bin\EntityFramework.SqlServer.xml
 C:\Users\jonney\Source\Repos\nleaps\nleaps\bin\FineUI.xml
 C:\Users\jonney\Source\Repos\nleaps\nleaps\obj\Debug\nleaps.dll
 C:\Users\jonney\Source\Repos\nleaps\nleaps\obj\Debug\nleaps.pdb
+C:\Users\jonney\Source\Repos\nleaps\nleaps\obj\Debug\nleaps.csprojResolveAssemblyReference.cache

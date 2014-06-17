@@ -2858,6 +2858,25 @@
     <Content Include="res\ueditor\net\imageUp.ashx" />
     <Content Include="res\ueditor\net\scrawlUp.ashx" />
     <Content Include="res\ueditor\net\upload\web.config" />
+    <Content Include="WorkFlow\FrmDesignFlow.aspx" />
+    <Content Include="WorkFlow\GooFlow\codebase\default.css" />
+    <Content Include="WorkFlow\GooFlow\codebase\GooFlow.css" />
+    <Content Include="WorkFlow\GooFlow\codebase\GooFlow.js" />
+    <Content Include="WorkFlow\GooFlow\codebase\GooFlow2.css" />
+    <Content Include="WorkFlow\GooFlow\codebase\GooFunc.js" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_bg.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_blank.gif" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_blank2.gif" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_blank2.htm" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_btn_bg.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_bullet.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_icon.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_icon2.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\GooFlow_line_oper.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\gooflow_tip.png" />
+    <Content Include="WorkFlow\GooFlow\codebase\jquery.min.js" />
+    <Content Include="WorkFlow\GooFlow\codebase\json2.js" />
+    <Content Include="WorkFlow\GooFlow\demo.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2865,6 +2884,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="WeiXin\wx.ashx" />
+    <Content Include="WorkFlow\GooFlow\codebase\img\Thumbs.db" />
+    <Content Include="WorkFlow\GooFlow\Thumbs.db" />
+    <Content Include="WorkFlow\GooFlow\设计器API说明书.doc" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon\accept.png" />
@@ -5037,6 +5059,13 @@
     </Compile>
     <Compile Include="WorkFlow\FormType.aspx.designer.cs">
       <DependentUpon>FormType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\FrmDesignFlow.aspx.cs">
+      <DependentUpon>FrmDesignFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\FrmDesignFlow.aspx.designer.cs">
+      <DependentUpon>FrmDesignFlow.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
